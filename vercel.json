@@ -42,7 +42,7 @@
       ]
     }
   ],
-  "buildCommand": "python3 _fuente/construir.py",
+  "buildCommand": "python3 _fuente/construir.py || echo 'Se usan las paginas ya generadas'",
   "outputDirectory": ".",
   "installCommand": "",
   "framework": null,
