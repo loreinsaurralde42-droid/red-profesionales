@@ -1,0 +1,126 @@
+<div class="bienvenida" id="bienvenida" role="dialog" aria-modal="true" aria-labelledby="bv-titulo">
+  <canvas id="bv-canvas" aria-hidden="true"></canvas>
+  <div class="velo" aria-hidden="true"></div>
+  <div class="bv-cont">
+    <div class="bv-resp" aria-hidden="true"><span id="bv-resp-txt">Inhalá</span></div>
+    <h2 class="bv-titulo" id="bv-titulo">Respirá.<br><b>Llegaste a buen lugar.</b></h2>
+    <p class="bv-texto">Acá te espera una red de profesionales dispuestos a escucharte, cerca tuyo o desde donde estés. Tomate tu tiempo: el primer paso ya lo diste.</p>
+    <div class="bv-botones">
+      <button type="button" class="bv-btn prim" id="bv-entrar">ENTRAR</button>
+    </div>
+  </div>
+  <p class="bv-nombre">{{NOMBRE_RED}}</p>
+</div>
+
+<main id="contenido">
+<section class="hero2" id="inicio" aria-labelledby="h-hero">
+  <div class="fotos" id="hero-fotos" aria-hidden="true"></div>
+  <button type="button" class="hero-pausa" id="hero-pausa" aria-pressed="false" aria-label="Pausar fotos">❚❚</button>
+  <div class="contenedor">
+    <h1 id="h-hero">Encontrar acompañamiento puede ser el primer paso.</h1>
+    <p class="hero-sub">Conectamos personas con profesionales de salud mental y desarrollo en el Chaco. Encontrá acompañamiento presencial y online.</p>
+    <form class="buscador2" id="buscador" role="search" aria-label="Buscar profesionales">
+      <div><label for="b-motivo">¿Qué te está pasando?</label><select id="b-motivo"></select></div>
+      <div><label for="b-profesion">Profesión</label><select id="b-profesion"></select></div>
+      <div><label for="b-lugar">Localidad</label><select id="b-lugar"></select></div>
+      <div><label for="b-modalidad">Modalidad</label><select id="b-modalidad"></select></div>
+      <button type="submit" class="btn-buscar"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>Buscar profesionales</button>
+    </form>
+    <a class="cta-sec" href="profesionales.html">Soy profesional y quiero sumarme a la Red →</a>
+  </div>
+</section>
+
+<section class="sec" id="profesionales" aria-labelledby="h-dir">
+  <div class="contenedor">
+    <div class="dir-cab"><h2 id="h-dir">Profesionales de la Red</h2><p style="margin:0;font-size:14px;color:#666">El orden cambia en cada visita: nadie queda siempre primero.</p></div>
+    <div class="filtros2">
+      <div class="f-fila">
+        <div class="f-campo"><label for="f-texto">Buscar por palabra</label><input type="search" id="f-texto" placeholder="Ej.: duelo, TEA, lenguaje, orientación vocacional" autocomplete="off"></div>
+        <div class="f-campo"><label for="f-profesion">Profesión</label><select id="f-profesion"></select></div>
+        <div class="f-campo"><label for="f-lugar">Localidad</label><select id="f-lugar"></select></div>
+        <div class="f-campo"><label for="f-modalidad">Modalidad</label><select id="f-modalidad"></select></div>
+      </div>
+      <div class="f-grupo"><p id="l-motivos">¿Qué te está pasando?</p><div class="chips" id="f-motivos" role="group" aria-labelledby="l-motivos"></div></div>
+      <button type="button" class="mas-filtros" id="mas-filtros" aria-expanded="false" aria-controls="extra">Más filtros +</button>
+      <div id="extra" hidden>
+        <div class="f-grupo"><p id="l-pob">Con quién trabaja</p><div class="chips" id="f-poblacion" role="group" aria-labelledby="l-pob"></div></div>
+        <div class="f-fila" style="margin-top:14px;grid-template-columns:1fr 1fr">
+          <div class="f-campo"><label for="f-enfoque">Enfoque</label><select id="f-enfoque"></select></div>
+          <div class="f-campo"><label for="f-orden">Orden</label><select id="f-orden"><option value="azar">Orden rotativo</option><option value="az">Alfabético (A-Z)</option></select></div>
+        </div>
+        <label class="check" style="margin-top:10px"><input type="checkbox" id="f-reintegro"> Emite factura para reintegro de obra social</label>
+      </div>
+      <div class="f-pie"><p class="res-info" style="margin:0" aria-live="polite"><strong id="contador"></strong> <span id="filtros-activos"></span></p>
+        <button type="button" class="limpiar" id="limpiar" hidden>Limpiar filtros</button></div>
+    </div>
+    <div class="grilla" id="grilla">{{TARJETAS}}</div>
+  </div>
+</section>
+
+<section class="sec franja-gris" id="motivos" aria-labelledby="h-motivos">
+  <div class="contenedor">
+    <h2 class="titulo-sec" id="h-motivos">¿Qué te está pasando?</h2>
+    <p style="text-align:center;max-width:44em;margin:0 auto 24px">No hace falta saber qué profesional necesitás. Elegí lo que más se parece a tu situación y te mostramos quiénes de la Red trabajan con eso.</p>
+    <ul class="motivos" id="lista-motivos"></ul>
+    <p style="text-align:center;font-size:14px;color:#666;margin-top:16px">Cada motivo muestra solo a profesionales que declararon trabajar esas temáticas en su ficha.</p>
+  </div>
+</section>
+
+<section class="sec" id="bienestar" aria-labelledby="h-bien">
+  <div class="contenedor">
+    <h2 class="titulo-sec" id="h-bien">Bienestar y orientación</h2>
+    <p style="text-align:center;max-width:44em;margin:0 auto 24px">Recursos para entender lo que te pasa, tomarte un momento y dar el primer paso. No reemplazan la atención profesional.</p>
+    <div class="bienestar3">{{BIENESTAR}}</div>
+  </div>
+</section>
+
+<section class="sec franja-gris" id="como-funciona" aria-labelledby="h-como">
+  <div class="contenedor">
+    <h2 class="titulo-sec" id="h-como">¿Cómo funciona?</h2>
+    <ol class="pasos4">
+      <li><strong>Buscá</strong>por lo que te pasa, la profesión, la localidad o la modalidad.</li>
+      <li><strong>Conocé</strong>la ficha de cada profesional: formación, enfoque y forma de trabajo.</li>
+      <li><strong>Escribí</strong>por WhatsApp para consultar disponibilidad, sin compromiso.</li>
+      <li><strong>Acordá</strong>directamente con el profesional día, modalidad y honorarios.</li>
+    </ol>
+  </div>
+</section>
+
+<section class="sec" aria-labelledby="h-prof">
+  <div class="contenedor">
+    <div class="prof-cta">
+      <div><h2 id="h-prof">¿Sos profesional de la salud mental o el desarrollo?</h2>
+        <p>Sumate a la Red y llegá a las personas que buscan acompañamiento en tu localidad y online.</p>
+        <ul><li>Ficha completa y página propia para compartir</li><li>Contacto directo por WhatsApp</li><li>Informe mensual de visitas y contactos</li></ul></div>
+      <div class="acc">
+        <div class="nums"><div><strong id="n-prof">{{N_PROF}}</strong>profesionales</div><div><strong id="n-disc">{{N_DISC}}</strong>disciplinas</div><div><strong id="n-loc">{{N_LOC}}</strong>localidades</div></div>
+        <a class="btn-buscar" style="text-decoration:none" href="profesionales.html">Soy profesional y quiero sumarme</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="ayuda-urgente" aria-labelledby="h-urg">
+  <div class="contenedor">
+    <div class="urgencia">
+      <h2 id="h-urg">¿Necesitás ayuda urgente?</h2>
+      <p>Este directorio no es un servicio de emergencias. Si vos o alguien cercano está en riesgo, pedí ayuda ahora:</p>
+      <ul>
+        <li><strong>Emergencias:</strong> <a href="tel:911">911</a> · <strong>SAME / emergencias médicas:</strong> <a href="tel:107">107</a></li>
+        <li><strong>Guardia remota de salud mental del Chaco:</strong> <a href="tel:+54{{G_DIA_TEL}}">{{G_DIA}}</a> (día) · <a href="tel:+54{{G_NOCHE_TEL}}">{{G_NOCHE}}</a> (noche)</li>
+        <li>O acercate a la guardia del hospital más cercano.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="sec franja-gris" aria-labelledby="h-exp">
+  <div class="contenedor">
+    <h2 class="titulo-sec" id="h-exp">Explorá la Red</h2>
+    <div class="explorar">
+      <div><h3>Por localidad</h3><ul id="exp-loc"></ul></div>
+      <div><h3>Por profesión</h3><ul id="exp-prof"></ul></div>
+    </div>
+  </div>
+</section>
+</main>
