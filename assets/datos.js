@@ -1166,7 +1166,7 @@ RED.PROFESIONALES = [
     "reintegro": false,
     "honorarios": "Consultar",
     "disponibilidad": "Mañana y tarde",
-    "whatsapp": "https://wa.me/message/HL52F3GP2VBMK1",
+    "whatsapp": "5493735446935",
     "telefonos": "",
     "instagram": "",
     "facebook": "",
