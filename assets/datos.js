@@ -1112,6 +1112,67 @@ RED.PROFESIONALES = [
     "email": "",
     "plan": "basico",
     "consentimiento": false
+  },
+  {
+    "id": "salomone",
+    "slug": "ronit-janet-salomone",
+    "nombre": "Ronit Janet Salomone",
+    "profesion": "Psicología",
+    "titulo": "Lic. en Psicología (Universidad de la Cuenca del Plata)",
+    "matricula": "M.P. 991",
+    "verificado": false,
+    "rol": "",
+    "foto": "img/salomone.jpg",
+    "provincia": "Chaco",
+    "localidad": "Villa Ángela",
+    "direccion": "Mitre 115, Consultorios Médicos Salud, Villa Ángela",
+    "resumen": "Terapia cognitivo-conductual con niños, adolescentes y adultos. Clínica infantojuvenil, orientación a familias, regulación emocional, duelo y crisis. También aptos psicológicos y psicodiagnóstico.",
+    "presentacion": [
+      "¿Estás buscando un espacio de escucha y acompañamiento para tu hijo, tu familia o para vos?",
+      "Será un placer acompañarte. Soy Ronit, licenciada en Psicología, con orientación cognitivo-conductual. Mi principal área de trabajo es la clínica infantojuvenil y el acompañamiento a las familias, un ámbito que disfruto especialmente.",
+      "Mi trabajo se centra en construir vínculos terapéuticos basados en la confianza y la empatía, utilizando el juego, la psicoeducación y estrategias específicas según las necesidades de cada persona.",
+      "También acompaño a adultos en el abordaje de ansiedad, depresión, estrés, duelos y situaciones de crisis, promoviendo el reconocimiento y desarrollo de recursos personales.",
+      "Si querés realizar una consulta, escribime por WhatsApp."
+    ],
+    "enfoque": "Cognitivo-conductual",
+    "enfoqueDetalle": "Terapia cognitivo-conductual (TCC)",
+    "poblacion": [
+      "Niños",
+      "Adolescentes",
+      "Adultos"
+    ],
+    "poblacionDetalle": "",
+    "areas": [
+      "Regulación emocional",
+      "Dificultades emocionales y conductuales en niños",
+      "Crianza y orientación a familias",
+      "Vínculos y habilidades sociales",
+      "Ansiedad, depresión y estrés",
+      "Duelo",
+      "Crisis del desarrollo y situaciones de crisis",
+      "Aptos psicológicos y evaluación psicodiagnóstica"
+    ],
+    "categorias": [],
+    "categoriasExcluir": ["pareja-vinculos"],
+    "formacion": [],
+    "modalidad": [
+      "Presencial",
+      "Online"
+    ],
+    "modalidadDetalle": "",
+    "idiomas": "",
+    "accesibilidad": "",
+    "atencion": "Particular",
+    "reintegro": false,
+    "honorarios": "Consultar",
+    "disponibilidad": "Mañana y tarde",
+    "whatsapp": "https://wa.me/message/HL52F3GP2VBMK1",
+    "telefonos": "",
+    "instagram": "",
+    "facebook": "",
+    "email": "",
+    "plan": "basico",
+    "consentimiento": false
   }
 ];
 

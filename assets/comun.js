@@ -23,7 +23,7 @@ function categoriasDe(p){
     (p.categorias||[]).includes(c.id) ||
     (c.poblaciones||[]).some(x => p.poblacion.includes(x)) ||
     c.claves.some(k => new RegExp(k).test(texto))
-  ).map(c => c.id);
+  ).filter(c => !(p.categoriasExcluir||[]).includes(c.id)).map(c => c.id);
 }
 
 /* ---------- Métricas anónimas (Umami, sin cookies) ---------- */

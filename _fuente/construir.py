@@ -43,7 +43,7 @@ def cats_de(p):
     for c in CATS:
         if c["id"] in (p.get("categorias") or []) or any(x in p["poblacion"] for x in c.get("poblaciones", [])) \
            or any(re.search(k, texto) for k in c["claves"]):
-            res.append(c["id"])
+            if c["id"] not in (p.get("categoriasExcluir") or []): res.append(c["id"])
     return res
 for p in PROFS: p["cats"] = cats_de(p)
 CAT = {c["id"]: c for c in CATS}
@@ -175,6 +175,27 @@ def boton_contacto(p, base=""):
     if p["email"]: return f'<a class="btn-wa mail" href="{e(mailto(p["email"]))}">Consultar por email</a>'
     return '<span class="btn-wa off" aria-disabled="true">Contacto a confirmar</span>'
 
+
+# ---------- Íconos de datos (trazo simple, color de la Red) ----------
+_IC = {
+ "poblacion": '<circle cx="9" cy="8" r="3.2"/><path d="M3 20c0-3.6 2.7-6 6-6s6 2.4 6 6"/><circle cx="17" cy="9" r="2.6"/><path d="M15.5 14.3c3 .3 5.5 2.4 5.5 5.7"/>',
+ "enfoque": '<path d="M9 18h6M10 21h4"/><path d="M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3z"/>',
+ "modalidad": '<rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/>',
+ "localidad": '<path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/>',
+ "direccion": '<path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-5h4v5"/>',
+ "idiomas": '<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/>',
+ "accesibilidad": '<circle cx="12" cy="4.5" r="1.8"/><path d="M5 8.5l7 1.5 7-1.5M12 10v4.5l-3 6.5M12 14.5l3 6.5"/>',
+ "telefonos": '<path d="M5 4h3.5l1.5 4-2 1.5a11 11 0 0 0 6.5 6.5l1.5-2 4 1.5V19a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/>',
+ "atencion": '<rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2M3 13h18"/>',
+ "reintegro": '<path d="M6 3h12v18l-3-2-3 2-3-2-3 2z"/><path d="M9 8h6M9 12h6M9 16h3"/>',
+ "honorarios": '<circle cx="12" cy="12" r="9"/><path d="M15 9.2c-.6-1-1.7-1.6-3-1.6-1.7 0-3 .9-3 2.2 0 3 6 1.6 6 4.6 0 1.3-1.3 2.2-3 2.2-1.4 0-2.6-.6-3.1-1.7M12 6v1.6M12 16.6V18"/>',
+ "disponibilidad": '<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>',
+ "instagram": '<rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/>',
+ "facebook": '<path d="M14 21v-8h3l.5-3.5H14V7.8c0-1 .3-1.8 1.8-1.8h1.8V3a24 24 0 0 0-2.7-.1c-2.6 0-4.4 1.6-4.4 4.5v2.1H7.5V13h3v8"/>',
+ "email": '<rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/>',
+}
+def icono(n): return f'<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">{_IC[n]}</svg>'
+
 # ======================================================================
 # 1) PÁGINAS DE PROFESIONALES
 # ======================================================================
@@ -189,11 +210,11 @@ def pagina_profesional(p):
     formacion = "".join(f"<li>{e(f)}</li>" for f in p["formacion"])
     areas = "".join(f"<li>{e(a)}</li>" for a in p["areas"])
     motivos = "".join(f'<li>{e(CAT[c]["nombre"])}</li>' for c in p["cats"])
-    def fila(t, v): return f"<dt>{t}</dt><dd>{e(v)}</dd>" if v else ""
+    def fila(ic, t, v): return f'<li><span class="d-ico" title="{t}">{icono(ic)}</span><span><span class="sr">{t}: </span>{e(v)}</span></li>' if v else ""
     redes = []
-    if p["instagram"]: redes.append(f'<a href="https://www.instagram.com/{e(p["instagram"])}/" target="_blank" rel="noopener">Instagram <span aria-hidden="true">↗</span></a>')
-    if p.get("facebook"): redes.append(f'<a href="{e(fb_url(p["facebook"]))}" target="_blank" rel="noopener">Facebook <span aria-hidden="true">↗</span></a>')
-    if p["email"]: redes.append(f'<a href="{e(mailto(p["email"]))}">{e(p["email"])}</a>')
+    if p["instagram"]: redes.append(f'<a href="https://www.instagram.com/{e(p["instagram"])}/" target="_blank" rel="noopener"><span class="d-ico">{icono("instagram")}</span>@{e(p["instagram"])}</a>')
+    if p.get("facebook"): redes.append(f'<a href="{e(fb_url(p["facebook"]))}" target="_blank" rel="noopener"><span class="d-ico">{icono("facebook")}</span>Facebook</a>')
+    if p["email"]: redes.append(f'<a href="{e(mailto(p["email"]))}"><span class="d-ico">{icono("email")}</span>{e(p["email"])}</a>')
     verif = ("La Red comprobó esta matrícula ante el colegio o consejo profesional." if p.get("verificado")
              else "Matrícula informada por el profesional. La verificación ante el colegio profesional está en curso.")
     mismos = [q for q in PROFS if q["localidad"] == p["localidad"] and q["id"] != p["id"]][:4]
@@ -223,21 +244,21 @@ def pagina_profesional(p):
     <section class="p-bloque" aria-labelledby="h-areas"><h2 id="h-areas">Áreas de trabajo</h2>
       {f"<ul>{areas}</ul>" if areas else ""}
       {f'<h3 class="sr">Motivos de consulta</h3><ul class="p-etiquetas" style="margin-top:14px">{motivos}</ul>' if motivos else ""}
-      <dl class="datos" style="margin-top:16px">{fila("Población", p.get("poblacionDetalle") or ", ".join(p["poblacion"]))}{fila("Enfoque", p["enfoqueDetalle"])}</dl>
+      <ul class="datos-ico" style="margin-top:16px">{fila("poblacion","Población", p.get("poblacionDetalle") or ", ".join(p["poblacion"]))}{fila("enfoque","Enfoque", p["enfoqueDetalle"])}</ul>
     </section>
-    <section class="p-bloque" aria-labelledby="h-mod"><h2 id="h-mod">Modalidad de atención</h2><dl class="datos">
-      {fila("Modalidad", modalidad_txt(p))}{fila("Localidad", p["localidad"] + ", " + p["provincia"])}{fila("Dirección", p["direccion"])}{fila("Idiomas", p["idiomas"])}{fila("Accesibilidad", p.get("accesibilidad"))}{fila("Teléfonos", p["telefonos"])}
-    </dl></section>
-    <section class="p-bloque" aria-labelledby="h-cons"><h2 id="h-cons">Información de consulta</h2><dl class="datos">
-      {fila("Atención", p["atencion"])}{fila("Reintegros", "Emite factura para gestionar reintegros con tu obra social" if p["reintegro"] else "")}{fila("Honorarios", p["honorarios"])}{fila("Disponibilidad", p["disponibilidad"])}
-    </dl>{'' if (p["atencion"] or p["honorarios"] or p["disponibilidad"] or p["reintegro"]) else '<p>Consultá honorarios, obra social y horarios directamente con el profesional.</p>'}</section>
+    <section class="p-bloque" aria-labelledby="h-mod"><h2 id="h-mod">Modalidad de atención</h2><ul class="datos-ico">
+      {fila("modalidad","Modalidad", modalidad_txt(p))}{fila("localidad","Localidad", p["localidad"] + ", " + p["provincia"])}{fila("direccion","Dirección", p["direccion"])}{fila("idiomas","Idiomas", p["idiomas"])}{fila("accesibilidad","Accesibilidad", p.get("accesibilidad"))}{fila("telefonos","Teléfonos", p["telefonos"])}
+    </ul></section>
+    <section class="p-bloque" aria-labelledby="h-cons"><h2 id="h-cons">Información de consulta</h2><ul class="datos-ico">
+      {fila("atencion","Atención", p["atencion"])}{fila("reintegro","Reintegros", "Emite factura para gestionar reintegros con tu obra social" if p["reintegro"] else "")}{fila("honorarios","Honorarios", ("Honorarios: " + p["honorarios"]) if p["honorarios"] and len(p["honorarios"])<14 else p["honorarios"])}{fila("disponibilidad","Disponibilidad", p["disponibilidad"])}
+    </ul>{'' if (p["atencion"] or p["honorarios"] or p["disponibilidad"] or p["reintegro"]) else '<p>Consultá honorarios, obra social y horarios directamente con el profesional.</p>'}</section>
     {f'<section aria-labelledby="h-otros"><h2 id="h-otros" style="font-size:20px;color:#333;margin:26px 0 12px">Otros profesionales en {e(p["localidad"])}</h2><div class="otros">{otros}</div></section>' if otros else ""}
    </div>
    <aside class="p-lateral" aria-label="Contacto">
     <div class="p-bloque">
      <h2>Contacto directo</h2>
      {boton_contacto(p)}
-     <p style="font-size:13.5px;color:#666;margin:10px 0 0">Se abre WhatsApp con un mensaje que indica que llegás desde la Red. La conversación es directamente con el profesional.</p>
+     <p style="font-size:13.5px;color:#666;margin:10px 0 0">{"Se abre WhatsApp con un mensaje que indica que llegás desde la Red." if not p["whatsapp"].startswith("http") else "Se abre WhatsApp."} La conversación es directamente con el profesional.</p>
     </div>
     {f'<div class="p-bloque"><h2>Redes y contacto</h2><div class="p-redes">{"".join(redes)}</div></div>' if redes else ""}
     <div class="p-bloque"><h2>Compartir este perfil</h2>

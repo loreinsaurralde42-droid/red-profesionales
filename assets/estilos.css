@@ -575,3 +575,11 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,su
   body{-webkit-text-size-adjust:100%}
 }
 @media (max-width:600px){.rep-btn{width:32px;height:32px}.rep-principal{padding:6px 8px;min-height:36px}}
+/* Datos del perfil con íconos */
+.datos-ico{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.datos-ico li{display:flex;align-items:flex-start;gap:12px;font-size:15.5px;color:#444;line-height:1.45}
+.d-ico{flex:0 0 34px;width:34px;height:34px;border-radius:50%;background:#e8f3f6;color:#1b7389;display:inline-flex;align-items:center;justify-content:center}
+.datos-ico li > span:last-child{padding-top:6px}
+.p-redes a .d-ico{flex-basis:30px;width:30px;height:30px}
+.p-redes{flex-direction:column;gap:8px}
+.p-redes a{gap:10px;word-break:break-word}
