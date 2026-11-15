@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-construir.py — genera las páginas estáticas de la Red a partir de _fuente/datos.js
+construir.py — genera las páginas estáticas de ARANDU a partir de _fuente/datos.js
 
 Uso (desde la carpeta raíz del sitio):   python3 _fuente/construir.py
 Requiere Python 3 y Node.js (solo para leer datos.js).
@@ -101,10 +101,10 @@ def pie(base):
       <div><h2>{e(C["nombreRed"])}</h2><p>Un directorio regional que conecta a las personas con profesionales de la salud mental y el desarrollo. Empezamos por el Chaco y vamos hacia todo el NEA.</p>
         <p><strong style="color:#fff">¿Urgencia?</strong> 911 · 107 · Guardia de salud mental {e(C["guardiaDiurna"])} (día) / {e(C["guardiaNocturna"])} (noche)</p></div>
       <div><h2>Personas</h2><ul><li><a href="{base}index.html#profesionales">Buscar profesionales</a></li><li><a href="{base}index.html#motivos">¿Qué te está pasando?</a></li><li><a href="{base}bienestar/index.html">Bienestar y orientación</a></li>{locs}</ul></div>
-      <div><h2>Profesionales</h2><ul><li><a href="{base}profesionales.html">Sumarme a la Red</a></li><li><a href="{base}profesionales.html#verificacion">Cómo verificamos</a></li><li><a href="mailto:{e(C["emailSumarse"])}">{e(C["emailSumarse"])}</a></li></ul></div>
-      <div><h2>La Red</h2><ul><li><a href="{base}nosotros.html">Nosotros</a></li><li><a href="{base}privacidad.html">Política de privacidad</a></li><li><a href="{base}terminos.html">Términos y condiciones</a></li></ul></div>
+      <div><h2>Profesionales</h2><ul><li><a href="{base}profesionales.html">Sumarme a ARANDU</a></li><li><a href="{base}profesionales.html#verificacion">Cómo verificamos</a></li><li><a href="mailto:{e(C["emailSumarse"])}">{e(C["emailSumarse"])}</a></li></ul></div>
+      <div><h2>ARANDU</h2><ul><li><a href="{base}nosotros.html">Nosotros</a></li><li><a href="{base}privacidad.html">Política de privacidad</a></li><li><a href="{base}terminos.html">Términos y condiciones</a></li></ul></div>
     </div>
-    <p class="legal">© <span class="anio">{date.today().year}</span> {e(C["nombreRed"])}. Los perfiles muestran información brindada por cada profesional; la Red indica en cada ficha si la matrícula fue verificada. Este sitio no reemplaza la atención profesional ni los servicios de emergencia.</p>
+    <p class="legal">© <span class="anio">{date.today().year}</span> {e(C["nombreRed"])}. Los perfiles muestran información brindada por cada profesional; ARANDU indica en cada ficha si la matrícula fue verificada. Este sitio no reemplaza la atención profesional ni los servicios de emergencia.</p>
   </div>
 </footer>
 <button class="ir-arriba" type="button" aria-label="Ir arriba">▲</button>'''
@@ -161,7 +161,7 @@ def migas(base, items):
 
 def sello_html(p):
     if not p["matricula"]: return '<span class="sello pend">Matrícula a confirmar</span>'
-    if p.get("verificado"): return f'<span class="sello ok">✓ {e(p["matricula"])} · verificada por la Red</span>'
+    if p.get("verificado"): return f'<span class="sello ok">✓ {e(p["matricula"])} · verificada por ARANDU</span>'
     return f'<span class="sello info">{e(p["matricula"])} · informada por el profesional</span>'
 def etq_prof(p):
     c = D["PROFESIONES"].get(p["profesion"], {"etq": p["profesion"], "color": "#eee", "texto": "#333"})
@@ -176,7 +176,7 @@ def boton_contacto(p, base=""):
     return '<span class="btn-wa off" aria-disabled="true">Contacto a confirmar</span>'
 
 
-# ---------- Íconos de datos (trazo simple, color de la Red) ----------
+# ---------- Íconos de datos (trazo simple, color de ARANDU) ----------
 _IC = {
  "poblacion": '<circle cx="9" cy="8" r="3.2"/><path d="M3 20c0-3.6 2.7-6 6-6s6 2.4 6 6"/><circle cx="17" cy="9" r="2.6"/><path d="M15.5 14.3c3 .3 5.5 2.4 5.5 5.7"/>',
  "enfoque": '<path d="M9 18h6M10 21h4"/><path d="M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3z"/>',
@@ -215,11 +215,11 @@ def pagina_profesional(p):
     if p["instagram"]: redes.append(f'<a href="https://www.instagram.com/{e(p["instagram"])}/" target="_blank" rel="noopener"><span class="d-ico">{icono("instagram")}</span>@{e(p["instagram"])}</a>')
     if p.get("facebook"): redes.append(f'<a href="{e(fb_url(p["facebook"]))}" target="_blank" rel="noopener"><span class="d-ico">{icono("facebook")}</span>Facebook</a>')
     if p["email"]: redes.append(f'<a href="{e(mailto(p["email"]))}"><span class="d-ico">{icono("email")}</span>{e(p["email"])}</a>')
-    verif = ("La Red comprobó esta matrícula ante el colegio o consejo profesional." if p.get("verificado")
+    verif = ("ARANDU comprobó esta matrícula ante el colegio o consejo profesional." if p.get("verificado")
              else "Matrícula informada por el profesional. La verificación ante el colegio profesional está en curso.")
     mismos = [q for q in PROFS if q["localidad"] == p["localidad"] and q["id"] != p["id"]][:4]
     otros = "".join(f'<a class="otro" href="{q["slug"]}.html">{foto_html(q, base)}<span>{e(q["nombre"])}<small>{e(q["profesion"])}</small></span></a>' for q in mismos)
-    titulo = f'{p["nombre"]} – {prof_nombre} en {p["localidad"]}, Chaco | {C["nombreRed"]}'
+    titulo = f'{p["nombre"]} – {prof_nombre} en {p["localidad"]}, Chaco | {C["nombreCorto"]}'
     desc = f'{p["nombre"]}, {p["titulo"]}. {p["resumen"]}'[:300]
     ld_p = {"@context": "https://schema.org", "@type": "Person", "name": p["nombre"], "jobTitle": prof_nombre,
             "description": p["resumen"], "url": url, **({"image": SITIO + "/" + p["foto"]} if p["foto"] else {}),
@@ -259,7 +259,7 @@ def pagina_profesional(p):
     <div class="p-bloque">
      <h2>Contacto directo</h2>
      {boton_contacto(p)}
-     <p style="font-size:13.5px;color:#666;margin:10px 0 0">{"Se abre WhatsApp con un mensaje que indica que llegás desde la Red." if not p["whatsapp"].startswith("http") else "Se abre WhatsApp."} La conversación es directamente con el profesional.</p>
+     <p style="font-size:13.5px;color:#666;margin:10px 0 0">{"Se abre WhatsApp con un mensaje que indica que llegás desde ARANDU." if not p["whatsapp"].startswith("http") else "Se abre WhatsApp."} La conversación es directamente con el profesional.</p>
     </div>
     {f'<div class="p-bloque"><h2>Redes y contacto</h2><div class="p-redes">{"".join(redes)}</div></div>' if redes else ""}
     <div class="p-bloque"><h2>Compartir este perfil</h2>
@@ -282,9 +282,9 @@ for p in PROFS: GENERADAS.append(pagina_profesional(p))
 # 2) PÁGINAS POR LOCALIDAD (solo donde hay profesionales)
 # ======================================================================
 INTRO_LOC = {
-    "Villa Ángela": "Villa Ángela concentra hoy la mayor parte de la Red. Acá vas a encontrar psicólogas, psicólogos y otros profesionales de la salud mental y el desarrollo que atienden en consultorio en la ciudad y, en muchos casos, también online.",
-    "Resistencia": "Profesionales de la Red que atienden en Resistencia, de forma presencial y online. A medida que se sumen más colegas de la capital chaqueña, los vas a ver en esta página.",
-    "Presidencia Roque Sáenz Peña": "Profesionales de la Red que atienden en Presidencia Roque Sáenz Peña, de forma presencial y online.",
+    "Villa Ángela": "Villa Ángela concentra hoy la mayor parte de ARANDU. Acá vas a encontrar psicólogas, psicólogos y otros profesionales de la salud mental y el desarrollo que atienden en consultorio en la ciudad y, en muchos casos, también online.",
+    "Resistencia": "Profesionales de ARANDU que atienden en Resistencia, de forma presencial y online. A medida que se sumen más colegas de la capital chaqueña, los vas a ver en esta página.",
+    "Presidencia Roque Sáenz Peña": "Profesionales de ARANDU que atienden en Presidencia Roque Sáenz Peña, de forma presencial y online.",
 }
 def tarjeta_estatica(p, base):
     mot = "".join(f'<li>{e(CAT[c]["nombre"])}</li>' for c in p["cats"][:3])
@@ -306,21 +306,21 @@ for loc in LOCS:
     cuerpo = f'''{nav}
 <main id="contenido" class="pagina"><div class="contenedor">
  <div class="pagina-texto"><h1>{nombre_prof} en {e(loc)}, Chaco</h1>
- <p class="bajada">{e(INTRO_LOC.get(loc, f"Profesionales de la Red que atienden en {loc}."))}</p>
+ <p class="bajada">{e(INTRO_LOC.get(loc, f"Profesionales de ARANDU que atienden en {loc}."))}</p>
  <p>{len(lista)} {"profesional" if len(lista)==1 else "profesionales"} · {online} con atención online · Disciplinas: {e(", ".join(ps))}.</p></div>
  <div class="grilla" style="margin-top:20px">{"".join(tarjeta_estatica(p, base) for p in lista)}</div>
  <div class="cta-final"><p>¿Buscás por motivo de consulta, profesión o atención online?</p><a class="btn-sec" href="{base}index.html#profesionales">Ir al buscador completo</a></div>
 </div></main>'''
     ld_l = {"@context": "https://schema.org", "@type": "ItemList", "name": f"{nombre_prof} en {loc}",
             "itemListElement": [{"@type": "ListItem", "position": i + 1, "url": f"{SITIO}/profesional/{p['slug']}.html", "name": p["nombre"]} for i, p in enumerate(lista)]}
-    GENERADAS.append(pagina(ruta, f"{nombre_prof} en {loc}, Chaco | {C['nombreRed']}",
+    GENERADAS.append(pagina(ruta, f"{nombre_prof} en {loc}, Chaco | {C['nombreCorto']}",
                             f"{nombre_prof} en {loc}, Chaco: {len(lista)} profesionales con matrícula, atención presencial y online. Contacto directo por WhatsApp.",
                             cuerpo, base=base, activo="buscar", ld=[ld_l, ld_m]))
 
 # ======================================================================
 # 3) BIENESTAR Y ORIENTACIÓN
 # ======================================================================
-AUTORIA = '<p class="autoria">Texto: equipo de la Red. <strong>Revisión profesional: pendiente.</strong> Este contenido es orientativo y no reemplaza una consulta con un profesional.</p>'
+AUTORIA = '<p class="autoria">Texto: equipo de ARANDU. <strong>Revisión profesional: pendiente.</strong> Este contenido es orientativo y no reemplaza una consulta con un profesional.</p>'
 CTA_BUSCAR = lambda base: f'<div class="cta-final"><p>¿Querés hablarlo con alguien?</p><a class="btn-sec" href="{base}index.html#profesionales">Buscar profesionales</a></div>'
 AVISO_EJ = '<p class="aviso">Este ejercicio puede ayudarte a bajar la intensidad en un momento difícil, pero no reemplaza la atención profesional. Si te sentís en riesgo, llamá al 911 o a la guardia de salud mental: ' + C["guardiaDiurna"] + ' (día) · ' + C["guardiaNocturna"] + ' (noche).</p>'
 
@@ -364,7 +364,7 @@ b.addEventListener("click",()=>{if(t){parar(false);}else{b.textContent="Detener"
   "Qué mirar en un perfil y qué preguntar en el primer contacto.",
   '''<ol><li><strong>Empezá por lo que te pasa.</strong> En el buscador podés elegir un motivo (por ejemplo, ansiedad, duelo o crianza) y ver quiénes trabajan con eso.</li>
 <li><strong>Mirá la disciplina.</strong> No es lo mismo una psicóloga que una psiquiatra o una fonoaudióloga. Si tenés dudas, leé la guía sobre las diferencias entre disciplinas.</li>
-<li><strong>Revisá la matrícula.</strong> Cada ficha indica la matrícula y si la Red ya la verificó.</li>
+<li><strong>Revisá la matrícula.</strong> Cada ficha indica la matrícula y si ARANDU ya la verificó.</li>
 <li><strong>Pensá en lo práctico.</strong> Presencial u online, horarios, obra social o reintegro, honorarios.</li>
 <li><strong>Escribí sin compromiso.</strong> Preguntar disponibilidad o modalidad no te obliga a nada.</li>
 <li><strong>Date tiempo.</strong> Sentirte cómodo con la persona que te acompaña es importante. Si después de algunos encuentros no te sentís a gusto, podés buscar a otra persona.</li></ol>'''),
@@ -376,7 +376,7 @@ b.addEventListener("click",()=>{if(t){parar(false);}else{b.textContent="Detener"
 <li>Es un buen momento para preguntar cómo trabaja, con qué frecuencia serían los encuentros, cuánto dura cada sesión y cuáles son los honorarios.</li>
 <li>Lo que se habla en consulta está protegido por el secreto profesional.</li></ul>
 <p>Es normal sentir nervios. Podés decirlo: también es parte de lo que se puede trabajar.</p>'''),
- ("C", "diferencias-entre-disciplinas", "Guía", "Diferencias entre las disciplinas de la Red",
+ ("C", "diferencias-entre-disciplinas", "Guía", "Diferencias entre las disciplinas de ARANDU",
   "Psicología, psiquiatría, psicopedagogía, fonoaudiología y más: qué hace cada una.",
   '''<dl class="datos" style="grid-template-columns:1fr">
 <dt>Psicología</dt><dd>Acompaña el malestar emocional y los conflictos a través de la palabra (psicoterapia). También realiza evaluaciones y orientación vocacional.</dd>
@@ -399,10 +399,10 @@ b.addEventListener("click",()=>{if(t){parar(false);}else{b.textContent="Detener"
   '''<p>Las infancias y adolescencias atraviesan cambios constantes, y no todo malestar necesita una consulta. Algunas señales que conviene mirar con más atención:</p>
 <ul><li>Cambios marcados y sostenidos en el sueño, la alimentación, el humor o el rendimiento escolar.</li><li>Aislamiento, miedos intensos o enojo que no cede.</li>
 <li>Dificultades para hablar, comprender o aprender que se mantienen en el tiempo.</li><li>Situaciones difíciles en la familia: separaciones, duelos, mudanzas.</li></ul>
-<p>Hablar con calma, escuchar sin juzgar y contarle a tu hijo o hija que van a buscar ayuda juntos suele bajar la ansiedad. En la Red hay profesionales de distintas disciplinas que trabajan con niñas, niños, adolescentes y sus familias.</p>'''),
+<p>Hablar con calma, escuchar sin juzgar y contarle a tu hijo o hija que van a buscar ayuda juntos suele bajar la ansiedad. En ARANDU hay profesionales de distintas disciplinas que trabajan con niñas, niños, adolescentes y sus familias.</p>'''),
 ]
 PROXIMOS_A = ["Ansiedad", "Estrés", "Duelo", "Salud emocional", "Crianza", "Adolescencia", "Vínculos", "Desarrollo infantil", "Salud mental familiar"]
-GRUPOS = {"A": ("Entender lo que me pasa", "Artículos escritos por profesionales de la Red.", "📖", "#e0eff3"),
+GRUPOS = {"A": ("Entender lo que me pasa", "Artículos escritos por profesionales de ARANDU.", "📖", "#e0eff3"),
           "B": ("Tomarme un momento", "Ejercicios breves de respiración, pausa y regulación emocional.", "🌿", "#f3e6f0"),
           "C": ("Encontrar orientación", "Guías prácticas para dar el primer paso.", "🧭", "#fdf1d8")}
 
@@ -415,11 +415,11 @@ for g, sl, tipo, tit, res, contenido in RECURSOS:
 <h1>{e(tit)}</h1><p class="bajada">{e(res)}</p>{contenido}{AUTORIA}{CTA_BUSCAR(base)}</article></div></main>'''
     ld_a = {"@context": "https://schema.org", "@type": "Article", "headline": tit, "description": res, "inLanguage": "es-AR",
             "publisher": {"@type": "Organization", "name": C["nombreRed"]}, "dateModified": HOY}
-    GENERADAS.append(pagina(ruta, f"{tit} | {C['nombreRed']}", res, cuerpo, base=base, activo="bienestar", ld=[ld_a, ld_m]))
+    GENERADAS.append(pagina(ruta, f"{tit} | {C['nombreCorto']}", res, cuerpo, base=base, activo="bienestar", ld=[ld_a, ld_m]))
 
 def tarjetas_grupo(g, base):
     if g == "A":
-        return "".join(f'<article class="rec prox"><span class="tipo">Artículo</span><h3>{e(t)}</h3><p>Escrito por profesionales de la Red.</p><div class="acc"><span class="etq-prox">Próximamente</span></div></article>' for t in PROXIMOS_A)
+        return "".join(f'<article class="rec prox"><span class="tipo">Artículo</span><h3>{e(t)}</h3><p>Escrito por profesionales de ARANDU.</p><div class="acc"><span class="etq-prox">Próximamente</span></div></article>' for t in PROXIMOS_A)
     return "".join(f'<article class="rec"><span class="tipo">{e(tipo)}</span><h3>{e(tit)}</h3><p>{e(res)}</p><div class="acc"><a class="btn-sec" href="{base}bienestar/{sl}.html">{"Hacer el ejercicio" if gg=="B" else "Leer la guía"}<span class="sr">: {e(tit)}</span></a></div></article>'
                    for gg, sl, tipo, tit, res, _ in RECURSOS if gg == g)
 
@@ -431,8 +431,8 @@ cuerpo = f'''{nav}<main id="contenido" class="pagina"><div class="contenedor">
 <div class="pagina-texto"><h1>Bienestar y orientación</h1><p class="bajada">Recursos para entender lo que te pasa, tomarte un momento y encontrar el acompañamiento adecuado.</p>
 <p class="aviso">Estos recursos no reemplazan la atención profesional. Si estás en una situación de urgencia, llamá al 911 o a la guardia de salud mental del Chaco: {e(C["guardiaDiurna"])} (día) · {e(C["guardiaNocturna"])} (noche).</p></div>
 {secciones}{CTA_BUSCAR(base)}</div></main>'''
-GENERADAS.append(pagina("bienestar/index.html", f"Bienestar y orientación en salud mental | {C['nombreRed']}",
-                        "Ejercicios de respiración, guías para elegir profesional y saber cuándo consultar. Recursos gratuitos de la Red de salud mental del Chaco.",
+GENERADAS.append(pagina("bienestar/index.html", f"Bienestar y orientación en salud mental | {C['nombreCorto']}",
+                        "Ejercicios de respiración, guías para elegir profesional y saber cuándo consultar. Recursos gratuitos de ARANDU, red de salud mental del Chaco y el NEA.",
                         cuerpo, base=base, activo="bienestar", ld=[ld_m]))
 
 # ======================================================================
@@ -452,8 +452,8 @@ def texto_modal(nombre):
 nav, ld_m = migas("", [("Inicio", "index.html"), ("Nosotros", "")])
 nos = texto_modal("nosotros.html")
 que = texto_modal("que-hacemos.html").replace("<h1>", '<h2 id="que-hacemos">').replace("</h1>", "</h2>")
-GENERADAS.append(pagina("nosotros.html", f"Nosotros | {C['nombreRed']}",
-    "Quiénes somos, nuestra misión y cómo verificamos a los profesionales de la Red de salud mental y desarrollo del Chaco.",
+GENERADAS.append(pagina("nosotros.html", f"Nosotros | {C['nombreCorto']}",
+    "Quiénes somos, nuestra misión y cómo verificamos a los profesionales de ARANDU, red de salud mental, neurodesarrollo y bienestar del Chaco.",
     f'{nav}<main id="contenido" class="pagina"><div class="contenedor"><div class="pagina-texto">{nos}{que}{CTA_BUSCAR("")}</div></div></main>',
     activo="nosotros", ld=[ld_m, {"@context": "https://schema.org", "@type": "AboutPage", "name": "Nosotros", "url": SITIO + "/nosotros.html"}]))
 
@@ -464,12 +464,12 @@ priv = priv.replace("<h2>1. Quiénes somos</h2>", "<h2>1. Quiénes somos</h2>" +
 priv = priv.replace("<h2>3. Lo que NO hacemos</h2>", '''<h2>2 bis. Páginas de cada profesional</h2><p>Cada profesional tiene una página propia. Las métricas cuentan cuántas veces se visita cada página y cuántos clics recibe cada botón de contacto, siempre en forma agregada y sin identificar a quien la visita. Nunca registramos lo que escribís en el buscador ni el motivo de consulta que elegís.</p>
 <h2>3. Lo que NO hacemos</h2>''', 1)
 nav, ld_m = migas("", [("Inicio", "index.html"), ("Política de privacidad", "")])
-GENERADAS.append(pagina("privacidad.html", f"Política de privacidad | {C['nombreRed']}",
-    "Cómo cuida la Red tu privacidad: métricas anónimas sin cookies, sin registro de mensajes ni motivos de consulta.",
+GENERADAS.append(pagina("privacidad.html", f"Política de privacidad | {C['nombreCorto']}",
+    "Cómo cuida ARANDU tu privacidad: métricas anónimas sin cookies, sin registro de mensajes ni motivos de consulta.",
     f'{nav}<main id="contenido" class="pagina"><div class="contenedor"><div class="pagina-texto">{priv}</div></div></main>', activo="privacidad", ld=[ld_m]))
 term = texto_modal("terminos.html")
 nav, ld_m = migas("", [("Inicio", "index.html"), ("Términos y condiciones", "")])
-GENERADAS.append(pagina("terminos.html", f"Términos y condiciones | {C['nombreRed']}",
+GENERADAS.append(pagina("terminos.html", f"Términos y condiciones | {C['nombreCorto']}",
     "Términos y condiciones de uso del directorio de profesionales de salud mental y desarrollo del Chaco.",
     f'{nav}<main id="contenido" class="pagina"><div class="contenedor"><div class="pagina-texto">{term}</div></div></main>', activo="terminos", ld=[ld_m]))
 
@@ -546,12 +546,12 @@ cuerpo = f"""{nav}<main id="contenido" class="pagina"><div class="contenedor"><d
 {botones("Quiero sumarme")}
 </div>
 </div></div></main>"""
-GENERADAS.append(pagina("profesionales.html", "Sumate a ARANDU | Red de profesionales de salud mental y bienestar del Chaco y el NEA",
+GENERADAS.append(pagina("profesionales.html", "Sumate a ARANDU | Red de profesionales de la salud mental, del neurodesarrollo y bienestar",
     "ARANDU es un ecosistema de profesionales de la salud mental, el neurodesarrollo y el bienestar del Chaco y el NEA. Sumate: ficha verificada, página propia, contacto directo y comunidad de colegas.",
     cuerpo, activo="profesionales", ld=[ld_m]))
 
 # ---------- 404 ----------
-GENERADAS_404 = pagina("404.html", f"Página no encontrada | {C['nombreRed']}", "La página que buscás no existe.",
+GENERADAS_404 = pagina("404.html", f"Página no encontrada | {C['nombreCorto']}", "La página que buscás no existe.",
     '<main id="contenido" class="pagina"><div class="contenedor"><div class="pagina-texto"><h1>No encontramos esta página</h1><p>Puede que el enlace haya cambiado. Volvé al inicio para buscar profesionales.</p><p><a class="btn-sec" href="/index.html">Ir al inicio</a></p></div></div></main>',
     robots="noindex")
 
@@ -567,14 +567,14 @@ tarjetas_ssr = "".join(tarjeta_estatica(p, "") for p in PROFS)
 ld_home = [{"@context": "https://schema.org", "@type": "WebSite", "name": C["nombreRed"], "url": SITIO + "/", "inLanguage": "es-AR"},
            {"@context": "https://schema.org", "@type": "Organization", "name": C["nombreRed"], "url": SITIO + "/", "logo": SITIO + "/favicon.svg",
             "areaServed": {"@type": "AdministrativeArea", "name": "Chaco, Argentina"}, "email": C["emailRed"]},
-           {"@context": "https://schema.org", "@type": "ItemList", "name": "Profesionales de la Red",
+           {"@context": "https://schema.org", "@type": "ItemList", "name": "Profesionales de ARANDU",
             "itemListElement": [{"@type": "ListItem", "position": i + 1, "url": f"{SITIO}/profesional/{p['slug']}.html", "name": p["nombre"]} for i, p in enumerate(PROFS)]}]
 cuerpo = (plantilla_inicio.replace("{{BIENESTAR}}", bienestar_teaser).replace("{{TARJETAS}}", tarjetas_ssr)
           .replace("{{N_PROF}}", str(n_prof)).replace("{{N_LOC}}", str(n_loc)).replace("{{N_DISC}}", str(n_disc))
           .replace("{{G_DIA}}", e(C["guardiaDiurna"])).replace("{{G_NOCHE}}", e(C["guardiaNocturna"]))
           .replace("{{G_DIA_TEL}}", re.sub(r"\D", "", C["guardiaDiurna"])).replace("{{G_NOCHE_TEL}}", re.sub(r"\D", "", C["guardiaNocturna"]))
           .replace("{{NOMBRE_RED}}", e(C["nombreRed"])))
-pagina("index.html", f"Psicólogos y profesionales de salud mental en el Chaco | {C['nombreRed']}",
+pagina("index.html", f"Psicólogos y profesionales de salud mental en el Chaco | {C['nombreCorto']}",
        "Encontrá psicólogos, fonoaudiólogos y profesionales de la salud mental y el desarrollo en Villa Ángela, Resistencia, Sáenz Peña y todo el Chaco. Atención presencial y online, contacto directo por WhatsApp.",
        cuerpo, activo="buscar", ld=ld_home, scripts=("inicio.js",))
 

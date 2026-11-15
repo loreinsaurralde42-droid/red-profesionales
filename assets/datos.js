@@ -8,20 +8,21 @@ var RED = {};
 
 /* Configuración general (el nombre de la Red se cambia SOLO acá) */
 RED.CONFIG = {
-  "nombreRed": "Red de Profesionales de la Salud Mental y Desarrollo del Chaco",
+  "nombreRed": "ARANDU: Red de profesionales de la salud mental, del neurodesarrollo y bienestar",
+  "nombreCorto": "ARANDU",
   "logoLinea1": [
-    "Red",
-    "de Profesionales"
+    "ARANDU",
+    ""
   ],
-  "logoLinea2": "de la Salud Mental y Desarrollo del Chaco",
+  "logoLinea2": "Red de profesionales de la salud mental, del neurodesarrollo y bienestar",
   "sitioUrl": "https://redprofesionales-chaco-vercel.vercel.app",
   "umamiWebsiteId": "70a296e1-5511-4dbc-a00a-a31bd7c4a5d9",
   "umamiDominios": "redprofesionales-chaco-vercel.vercel.app",
   "emailRed": "psicologa.lorenainsaurralde@gmail.com",
   "emailSumarse": "psicologa.lorenainsaurralde@gmail.com",
   "fechaLegales": "11 de noviembre de 2026",
-  "mensajeWhatsApp": "Hola, te escribo desde la web de la Red de Profesionales de la Salud Mental y Desarrollo del Chaco. Quisiera consultar por un turno.",
-  "asuntoEmail": "Consulta desde la Red de Profesionales de la Salud Mental y Desarrollo del Chaco",
+  "mensajeWhatsApp": "Hola, te escribo desde la web de ARANDU, Red de profesionales de la salud mental, del neurodesarrollo y bienestar. Quisiera consultar por un turno.",
+  "asuntoEmail": "Consulta desde ARANDU",
   "guardiaDiurna": "362 461-8432",
   "guardiaNocturna": "362 481-4825",
   "velocidadCarrusel": 6000,
@@ -685,7 +686,7 @@ RED.PROFESIONALES = [
     "titulo": "Lic. en Psicología (UNC)",
     "matricula": "M.P. 750",
     "verificado": false,
-    "rol": "Fundadora de la Red",
+    "rol": "Fundadora de ARANDU",
     "foto": "img/insaurralde.jpg",
     "provincia": "Chaco",
     "localidad": "Villa Ángela",

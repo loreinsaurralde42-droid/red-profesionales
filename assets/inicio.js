@@ -133,7 +133,7 @@ function botonContacto(p){
 }
 function selloMatricula(p){
   if (!p.matricula) return `<span class="sello pend">Matrícula a confirmar</span>`;
-  return p.verificado ? `<span class="sello ok" title="La Red comprobó la matrícula ante el colegio profesional">✓ ${esc(p.matricula)} · verificada</span>`
+  return p.verificado ? `<span class="sello ok" title="ARANDU comprobó la matrícula ante el colegio profesional">✓ ${esc(p.matricula)} · verificada</span>`
                       : `<span class="sello info" title="Matrícula informada por el profesional; verificación en curso">${esc(p.matricula)} · informada</span>`;
 }
 function etqProf(p){ const c=RED.PROFESIONES[p.profesion]||{etq:p.profesion,color:"#eee",texto:"#333"}; return `<span class="t-prof" style="background:${c.color};color:${c.texto}">${esc(c.etq)}</span>`; }

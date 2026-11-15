@@ -593,3 +593,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,su
 .destacado.grande{font-size:22px;text-align:center;border-left:0;background:none;color:#1b7389;padding:0;margin-bottom:6px}
 li .etq-prox{margin-right:6px;background:#fdf1d8;color:#8a5a00;font-weight:600}
 @media (max-width:600px){.cierre-arandu .btns-par,.btns-par{align-items:stretch}.cierre-arandu .btns-par a{width:100%}}
+/* Nombre ARANDU en el logo (provisorio hasta la nueva marca) */
+.logo-l1{font-size:20px;letter-spacing:.06em}
+.logo-l2{white-space:normal;max-width:300px;line-height:1.25}
+@media (max-width:600px){.logo-l2{max-width:190px;font-size:10.5px}.logo-l1{font-size:18px}}
