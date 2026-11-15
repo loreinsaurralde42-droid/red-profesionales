@@ -584,3 +584,12 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,su
 .p-redes{flex-direction:column;gap:8px}
 .p-redes a{gap:10px;word-break:break-word}
 .p-bloque .datos-ico{padding-left:0}
+/* Sumate a ARANDU */
+.btns-par{display:flex;gap:12px;flex-wrap:wrap;align-items:stretch;margin:18px 0 8px}
+.btns-par a{text-decoration:none;flex:0 1 auto;width:auto;min-height:50px;white-space:normal;text-align:center;justify-content:center;display:inline-flex;align-items:center;gap:8px}
+.cierre-arandu .btns-par{justify-content:center}
+@media (max-width:600px){.btns-par{flex-direction:column}.btns-par a{width:100%}}
+.destacado{font-size:18px;font-weight:600;color:#8a3e7f;background:#f6edf4;border-left:4px solid #8a3e7f;padding:12px 16px;border-radius:8px}
+.destacado.grande{font-size:22px;text-align:center;border-left:0;background:none;color:#1b7389;padding:0;margin-bottom:6px}
+li .etq-prox{margin-right:6px;background:#fdf1d8;color:#8a5a00;font-weight:600}
+@media (max-width:600px){.cierre-arandu .btns-par,.btns-par{align-items:stretch}.cierre-arandu .btns-par a{width:100%}}

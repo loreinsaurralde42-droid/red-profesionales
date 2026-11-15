@@ -73,8 +73,8 @@ def cabecera(base, activo=""):
     return f'''<a class="saltar" href="#contenido">Saltar al contenido</a>
 <div class="barra-sup"><div class="contenedor">
   <span class="emerg">¿Es una urgencia? Llamá al <a href="tel:911">911</a> · Guardia de salud mental: <a href="tel:+54{re.sub(r"\D","",C["guardiaDiurna"])}">{e(C["guardiaDiurna"])}</a> (día) · <a href="tel:+54{re.sub(r"\D","",C["guardiaNocturna"])}">{e(C["guardiaNocturna"])}</a> (noche)</span>
-  <span class="cta-prof"><span><strong>¿Sos profesional?</strong> Sumate a la Red</span>
-  <a class="btn-accede" href="{base}profesionales.html">Quiero sumarme</a></span>
+  <span class="cta-prof"><span><strong>¿Sos profesional?</strong> Sumate a ARANDU</span>
+  <a class="btn-accede" href="{base}profesionales.html">Quiero ser parte de la red</a></span>
 </div></div>
 <header class="encabezado">
   <div class="contenedor">
@@ -86,7 +86,7 @@ def cabecera(base, activo=""):
       {a("index.html#motivos", "¿Qué te está pasando?", "motivos")}
       {a("bienestar/index.html", "Bienestar y orientación", "bienestar")}
       {a("profesionales.html", "Para profesionales", "profesionales")}
-      <div class="desplegable"><button type="button" aria-haspopup="true" aria-expanded="false">La Red</button>
+      <div class="desplegable"><button type="button" aria-haspopup="true" aria-expanded="false">ARANDU</button>
         <div class="sub">{a("nosotros.html","Nosotros","nosotros")}{a("privacidad.html","Privacidad","privacidad")}{a("terminos.html","Términos y condiciones","terminos")}</div></div>
       <a href="{base}index.html#profesionales" class="btn-online">Buscar</a>
     </nav>
@@ -473,53 +473,81 @@ GENERADAS.append(pagina("terminos.html", f"Términos y condiciones | {C['nombreR
     "Términos y condiciones de uso del directorio de profesionales de salud mental y desarrollo del Chaco.",
     f'{nav}<main id="contenido" class="pagina"><div class="contenedor"><div class="pagina-texto">{term}</div></div></main>', activo="terminos", ld=[ld_m]))
 
-# ---------- Para profesionales ----------
+# ---------- Para profesionales (Sumate a ARANDU) ----------
 from urllib.parse import quote
-mail_alta = f'mailto:{C["emailSumarse"]}?subject={quote("Quiero sumarme a la Red")}&body={quote("Hola, soy profesional de la salud mental / desarrollo y quiero sumarme a la Red.%0A%0ANombre y apellido:%0AProfesión:%0AMatrícula:%0ALocalidad:%0AWhatsApp:%0AInstagram:%0A".replace("%0A", chr(10)))}'
-nav, ld_m = migas("", [("Inicio", "index.html"), ("Para profesionales", "")])
+mail_alta = f'mailto:{C["emailSumarse"]}?subject={quote("Quiero sumarme a ARANDU")}&body={quote("Hola, soy profesional de la salud mental / desarrollo y quiero sumarme a ARANDU." + chr(10)*2 + "Nombre y apellido:" + chr(10) + "Profesión:" + chr(10) + "Matrícula:" + chr(10) + "Localidad:" + chr(10) + "WhatsApp:" + chr(10) + "Instagram:" + chr(10))}'
+WA_ALTA = "https://wa.me/message/YNFMM2C46JB6M1"
+nav, ld_m = migas("", [("Inicio", "index.html"), ("Sumate a ARANDU", "")])
 n_prof, n_loc, n_disc = len(PROFS), len(LOCS), len({p["profesion"] for p in PROFS})
-cuerpo = f'''{nav}<main id="contenido" class="pagina"><div class="contenedor"><div class="pagina-texto">
-<h1>Sumate a la Red</h1>
-<p class="bajada">Un espacio regional, creado por profesionales, para que tu consulta llegue a quienes la necesitan.</p>
-<p><a class="btn-buscar" style="text-decoration:none;white-space:normal;height:auto;min-height:50px;padding:10px 24px" href="{e(mail_alta)}" data-evento="alta-profesional">Soy profesional y quiero sumarme a la Red</a></p>
-<p style="font-size:14px;color:#666">Se abre un email a {e(C["emailSumarse"])} con los datos a completar.</p>
+def botones(txt_mail):
+    return f"""<div class="btns-par"><a class="btn-buscar" href="{e(mail_alta)}" data-evento="alta-profesional" data-dato="email">{txt_mail}</a>
+<a class="btn-wa" href="{WA_ALTA}" target="_blank" rel="noopener" data-evento="alta-profesional" data-dato="whatsapp">{ICON_WA}<span>Escribime por WhatsApp</span><span class="sr"> (se abre en una pestaña nueva)</span></a></div>"""
+cuerpo = f"""{nav}<main id="contenido" class="pagina"><div class="contenedor"><div class="pagina-texto">
+<h1>Sumate a ARANDU</h1>
+<p class="bajada">Arandu significa sabiduría en guaraní: escuchar y sentir al mismo tiempo. Así queremos acompañar. Somos una red regional creada por profesionales, para que tu consulta llegue a quienes la necesitan y para que nadie trabaje solo.</p>
+<p><em>Un ecosistema de sabiduría colectiva al servicio de la comunidad.</em></p>
+{botones("Soy profesional y quiero sumarme")}
+<p style="font-size:14px;color:#666">Podés mandarnos tus datos por email o escribirme directamente por WhatsApp.</p>
 
-<h2>Qué es la Red</h2>
-<p>Un directorio de profesionales de la salud mental y el desarrollo del Chaco, con proyección a todo el NEA. Hoy reúne {n_prof} profesionales de {n_disc} {"disciplina" if n_disc==1 else "disciplinas"} en {n_loc} {"localidad" if n_loc==1 else "localidades"}. No intermediamos en la relación terapéutica ni en el cobro de honorarios: las personas te escriben directamente.</p>
+<h2>Qué es ARANDU</h2>
+<p>ARANDU es un ecosistema para profesionales de la salud mental, el neurodesarrollo y el bienestar del Chaco, con proyección a todo el NEA. Su primer espacio es el directorio: hoy reúne {n_prof} profesionales de {n_disc} {"disciplina" if n_disc==1 else "disciplinas"} en {n_loc} {"localidad" if n_loc==1 else "localidades"}.</p>
+<p>Como para el pueblo guaraní y muchos originarios de nuestra región, creemos que la salud es una trama: no depende solo de lo que pasa dentro de una persona, sino también de sus vínculos, su comunidad y el lugar donde vive. Por eso apostamos a profesionales cercanos, que conocen el territorio y trabajan en red. Que integra y eleva la consciencia en las formas de tratar la enfermedad y generar salud a través del equilibrio entre todas las partes que componen a una persona, su entorno, la naturaleza, la espiritualidad y su propia manera de estar en la vida. En guaraní, ñe’ẽ es palabra y es alma. Acá cada voz cuenta. Sumá la tuya y compartí lo que tu trabajo ya está sembrando en las personas.</p>
+<p>No intermediamos en la relación terapéutica ni en el cobro de honorarios: las personas te escriben directamente.</p>
 
 <h2>Qué te ofrece</h2>
-<ul><li><strong>Una ficha completa y una página propia</strong> con URL para compartir en tus redes.</li>
-<li><strong>Contacto directo por WhatsApp</strong>, con un mensaje que indica que la consulta llega desde la Red.</li>
-<li><strong>Visibilidad por localidad, disciplina y motivo de consulta</strong>, incluso para quienes no conocen el nombre de tu especialidad.</li>
-<li><strong>Orden rotativo:</strong> el orden de los perfiles cambia en cada visita; nadie queda siempre primero.</li>
-<li><strong>Informe mensual</strong> con las visitas a tu perfil y los clics en tus botones de contacto.</li></ul>
+<p><strong>Visibilidad con criterio y alineado a la esencia de tu trabajo</strong></p>
+<ul><li>Una ficha completa y una página propia con un enlace para compartir en tus redes.</li>
+<li>Contacto directo por WhatsApp, con un mensaje que indica que la consulta llega desde ARANDU.</li>
+<li>Búsqueda por localidad, disciplina y motivo de consulta. Te encuentran incluso quienes no conocen el nombre de tu especialidad.</li>
+<li>Orden rotativo: los perfiles cambian de lugar en cada visita y nadie queda siempre primero.</li>
+<li>Un informe mensual con las visitas a tu perfil y los clics en tus botones de contacto.</li></ul>
+<p><strong>Comunidad ARANDU</strong></p>
+<p>Al sumarte formás parte de la Comunidad ARANDU, un espacio de colegas para:</p>
+<ul><li>Armar equipos interdisciplinarios con profesionales de distintas disciplinas.</li>
+<li>Derivar e interconsultar con confianza, pensando siempre en la persona.</li>
+<li>Recibir material para mejorar tus servicios y tu visibilidad con un marketing sostenible, consciente y transformador: comunicar quién sos con honestidad, estrategia y conocimiento, sin perder tu forma de trabajar.</li>
+<li>Publicar artículos en <a href="https://redprofesionales-chaco-vercel.vercel.app/bienestar/index.html">Bienestar y orientación</a>.</li>
+<li><span class="etq-prox">Próximamente</span> mentorías Profesiones con alma, para estructurar tu consultorio, tus servicios y tus productos. Integraciones de calendario, agenda, reservas, turnos y pagos.</li></ul>
+<p>Creemos que cada profesional tiene su propia verdad para compartir, y que ese saber se nutre todos los días de nuestros pacientes, que también nos enseñan.</p>
+
+<h2>Lo que nos une</h2>
+<p>Quienes formamos ARANDU compartimos un manifiesto y estos compromisos:</p>
+<ul><li>Ejercer con matrícula vigente y dentro de nuestra incumbencia.</li><li>Cuidar la confidencialidad de cada persona.</li>
+<li>Comunicar con evidencia, sin prometer curas ni resultados.</li><li>Derivar pensando en la persona, no en la competencia.</li>
+<li>Respetar los saberes originarios que inspiran nuestro nombre.</li></ul>
 
 <h2>Cómo es la inscripción</h2>
-<ol><li>Completás el formulario de datos (formación, enfoque, población, modalidad, contacto y una presentación breve) y enviás una foto.</li>
-<li>Nos enviás tu <strong>autorización escrita</strong> para publicar tu foto, matrícula, datos de contacto y presentación.</li>
-<li>Verificamos tu matrícula (ver abajo) y revisamos tu ficha con vos antes de publicarla.</li>
-<li>Publicamos tu perfil y te enviamos el enlace.</li></ol>
+<ol><li>Completás el formulario con tu formación, enfoque, población, modalidad, contacto y una presentación breve, y nos mandás una foto.</li>
+<li>Nos enviás tu autorización escrita para publicar tu foto, tu matrícula, tus datos de contacto y tu presentación.</li>
+<li>Verificamos tu matrícula y revisamos la ficha con vos antes de publicarla.</li>
+<li>Publicamos tu perfil y te enviamos el enlace. ¡Bienvenida, bienvenido a la trama!</li></ol>
 
 <h2 id="verificacion">Cómo verificamos la documentación</h2>
-<ol><li><strong>Matrícula:</strong> confirmamos ante el colegio o consejo profesional correspondiente que tengas título habilitante y matrícula provincial vigente.</li>
+<ul><li><strong>Matrícula:</strong> confirmamos ante el colegio o consejo profesional correspondiente que tengas título habilitante y matrícula provincial vigente.</li>
 <li><strong>Revisión del perfil:</strong> controlamos que los datos publicados sean claros y te correspondan.</li>
-<li><strong>Seguimiento:</strong> revisamos periódicamente que la información siga vigente.</li></ol>
-<p>Mientras la verificación está en curso, la ficha muestra la matrícula como <em>“informada por el profesional”</em>. Cuando se completa, pasa a <em>“verificada por la Red”</em>. La verificación nunca depende de un pago.</p>
+<li><strong>Seguimiento:</strong> revisamos periódicamente que la información siga vigente.</li></ul>
+<p>Mientras la verificación está en curso, la ficha muestra la matrícula como "informada por el profesional". Cuando termina, pasa a "verificada por ARANDU".</p>
+<p class="destacado">La verificación nunca depende de un pago.</p>
 
 <h2>Opciones de participación</h2>
-<ul><li><strong>{e(D["PLANES"]["basico"]["nombre"])}:</strong> {e(D["PLANES"]["basico"]["descripcion"])}</li>
-<li><strong>{e(D["PLANES"]["ampliado"]["nombre"])}</strong> y <strong>{e(D["PLANES"]["visibilidad"]["nombre"])}</strong>: en definición.</li></ul>
-<div class="pendiente-legal"><strong>A definir por la titular de la plataforma:</strong> condiciones de participación (gratuita o con costo) y el detalle de cada opción. Si en el futuro hay espacios de visibilidad pagos, se van a mostrar siempre identificados como <em>“espacio promocionado”</em>, separados de la verificación profesional y sin alterar el orden rotativo del directorio.</div>
+<p>Durante la etapa de lanzamiento, sumarte a ARANDU no tiene costo. Incluye el perfil básico: ficha completa en el directorio, página propia y contacto directo.</p>
+<p>Más adelante vamos a sumar un perfil ampliado y servicios para tu consultorio. Te vamos a avisar con anticipación, antes de cualquier cambio. Si en algún momento hay espacios de visibilidad pagos, siempre van a estar identificados como "espacio promocionado", separados de la verificación y sin alterar el orden rotativo.</p>
 
 <h2>Cómo tener más visibilidad hoy</h2>
 <ul><li>Completá todos los campos de tu ficha: áreas de trabajo, población, modalidad y disponibilidad.</li>
-<li>Escribí una presentación clara y cercana; si querés, te ayudamos a redactarla.</li>
+<li>Escribí una presentación clara y cercana. Si querés, te ayudamos a redactarla.</li>
 <li>Compartí el enlace de tu perfil en tus redes y en tu estado de WhatsApp.</li>
-<li>Proponé un artículo para la sección <a href="bienestar/index.html">Bienestar y orientación</a>.</li></ul>
-<div class="cta-final"><p>¿Tenés dudas? Escribinos a <a href="mailto:{e(C["emailSumarse"])}">{e(C["emailSumarse"])}</a></p><a class="btn-sec" href="{e(mail_alta)}" data-evento="alta-profesional">Quiero sumarme</a></div>
-</div></div></main>'''
-GENERADAS.append(pagina("profesionales.html", f"Para profesionales: sumate a la Red | {C['nombreRed']}",
-    "Profesionales de salud mental y desarrollo del Chaco: sumate a la Red, conseguí una ficha verificada, página propia y contacto directo por WhatsApp.",
+<li>Proponé un artículo para <a href="https://redprofesionales-chaco-vercel.vercel.app/bienestar/index.html">Bienestar y orientación</a>.</li></ul>
+
+<div class="cta-final cierre-arandu">
+<p class="destacado grande">Escuchar y sentir. Así se teje ARANDU.</p>
+<p>Sumá tu voz a ARANDU y hacé que tu trabajo llegue más lejos.</p>
+<p>¿Tenés dudas? Escribinos a <a href="mailto:{e(C["emailSumarse"])}">{e(C["emailSumarse"])}</a> o por <a href="{WA_ALTA}" target="_blank" rel="noopener">WhatsApp</a>.</p>
+{botones("Quiero sumarme")}
+</div>
+</div></div></main>"""
+GENERADAS.append(pagina("profesionales.html", "Sumate a ARANDU | Red de profesionales de salud mental y bienestar del Chaco y el NEA",
+    "ARANDU es un ecosistema de profesionales de la salud mental, el neurodesarrollo y el bienestar del Chaco y el NEA. Sumate: ficha verificada, página propia, contacto directo y comunidad de colegas.",
     cuerpo, activo="profesionales", ld=[ld_m]))
 
 # ---------- 404 ----------
