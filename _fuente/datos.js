@@ -690,7 +690,7 @@ RED.PROFESIONALES = [
     "provincia": "Chaco",
     "localidad": "Villa Ángela",
     "direccion": "",
-    "resumen": "Psicóloga especializada en salud y bienestar laboral: estrés, burnout, ansiedad y transiciones profesionales. También acompaño a líderes que quieren sostener su rendimiento sin quemarse.",
+    "resumen": "Psicóloga especializada en salud y bienestar laboral: estrés, burnout, ansiedad y transiciones profesionales. Creamos o reescribimos tu proyecto de vida según el momento que estés atravesando. Psicoterapia, mentorías, programas, cursos y consultorías.",
     "presentacion": [
       "Hola, bienvenida, bienvenido.",
       "Si llegaste hasta acá, es probable que el trabajo te esté pesando más de lo que debería. Tal vez vivís en piloto automático y el cansancio no se va con un fin de semana. Tal vez estás atravesando un cambio (un despido, una renuncia, un puesto nuevo, las ganas de reinventarte y emprender) y no sabés por dónde empezar. O quizás ocupás un rol de liderazgo, rendís mucho, y sentís que ese ritmo te está costando la salud, el descanso o tus vínculos.",
@@ -698,6 +698,7 @@ RED.PROFESIONALES = [
       "Soy Lorena, psicóloga especializada en salud y bienestar laboral. Hace más de 10 años acompaño a personas que atraviesan estrés laboral, burnout, ansiedad y desorientación, especialmente en momentos de cambio o transición profesional. También acompaño a líderes y profesionales exigidos que quieren sostener su rendimiento sin quemarse.",
       "Cuando el trabajo te desborda, lo urgente tapa lo importante y empezás a postergar lo que querés, lo que necesitás y hasta a vos. Por eso no nos quedamos en aliviar síntomas: vamos a la raíz. Reconectamos con lo que te da sentido, reconocemos tus recursos y posibilidades reales, y pasamos de la postergación a una acción alineada con quien sos. Una vida más leve, coherente y verdadera es posible.",
       "Trabajo desde la psicología regenerativa, como llamo a mi orientación integrativa y salutogénica. La salutogénesis pone el foco en la generación de salud. Aunque hoy te sientas lejos de tu bienestar, siempre hay algo en vos que está sano, y desde ahí empezamos a construir.",
+      "Además de la psicoterapia, ofrezco mentorías, programas, cursos y consultorías, para personas, equipos y organizaciones que quieren cuidar la salud y el bienestar en el trabajo.",
       "Me formé en tantas disciplinas que ya no entran en una bio, y entendí que esas piezas no funcionan por separado. Por eso reuní todo lo que aprendí y viví en un método propio: Basta Unir. Cuida tu salud mental, tu cuerpo, tus vínculos, tus emociones, tu entorno y tu vida laboral como partes de un mismo todo.",
       "En el proceso vamos a:",
       [
@@ -706,6 +707,7 @@ RED.PROFESIONALES = [
         "Reencontrarte con tu sentido y tu propósito",
         "Decidir desde la claridad y no desde el miedo, el agotamiento o la desesperación",
         "Sostener tu rendimiento sin que te cueste la salud",
+        "Crear tu proyecto de vida, o reescribirlo según el momento que estés atravesando",
         "Dar pasos concretos, posibles y sostenibles hacia la vida que realmente querés"
       ],
       "Ya diste el primer paso. Ahora lo caminamos juntas, juntos. Escribime y agendá tu primer encuentro."
@@ -722,9 +724,11 @@ RED.PROFESIONALES = [
       "Cambios y transiciones laborales o profesionales",
       "Decisiones de carrera, sentido y propósito",
       "Psicoterapia para líderes y ejecutivos",
-      "Alto rendimiento sostenible"
+      "Alto rendimiento sostenible",
+      "Creación y reescritura de proyectos de vida"
     ],
     "categorias": [],
+    "servicios": ["Psicoterapia individual y grupal", "Mentorías", "Programas", "Cursos", "Consultorías"],
     "formacion": [
       "Psicología integrativa",
       "TCC (Terapia cognitivo-conductual)",

@@ -583,3 +583,4 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,su
 .p-redes a .d-ico{flex-basis:30px;width:30px;height:30px}
 .p-redes{flex-direction:column;gap:8px}
 .p-redes a{gap:10px;word-break:break-word}
+.p-bloque .datos-ico{padding-left:0}

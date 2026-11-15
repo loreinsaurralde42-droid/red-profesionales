@@ -246,6 +246,7 @@ def pagina_profesional(p):
       {f'<h3 class="sr">Motivos de consulta</h3><ul class="p-etiquetas" style="margin-top:14px">{motivos}</ul>' if motivos else ""}
       <ul class="datos-ico" style="margin-top:16px">{fila("poblacion","Población", p.get("poblacionDetalle") or ", ".join(p["poblacion"]))}{fila("enfoque","Enfoque", p["enfoqueDetalle"])}</ul>
     </section>
+    {f'<section class="p-bloque" aria-labelledby="h-serv"><h2 id="h-serv">Servicios</h2><ul class="p-etiquetas">{"".join(f"<li>{e(x)}</li>" for x in p.get("servicios") or [])}</ul></section>' if p.get("servicios") else ""}
     <section class="p-bloque" aria-labelledby="h-mod"><h2 id="h-mod">Modalidad de atención</h2><ul class="datos-ico">
       {fila("modalidad","Modalidad", modalidad_txt(p))}{fila("localidad","Localidad", p["localidad"] + ", " + p["provincia"])}{fila("direccion","Dirección", p["direccion"])}{fila("idiomas","Idiomas", p["idiomas"])}{fila("accesibilidad","Accesibilidad", p.get("accesibilidad"))}{fila("telefonos","Teléfonos", p["telefonos"])}
     </ul></section>
