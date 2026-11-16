@@ -995,7 +995,7 @@ RED.PROFESIONALES = [
     "reintegro": true,
     "honorarios": "",
     "disponibilidad": "Lunes a viernes, de 8 a 11 y de 15 a 18 h. Consultá horarios disponibles.",
-    "whatsapp": "5493516066375",
+    "whatsapp": "5493735531385",
     "telefonos": "",
     "instagram": "",
     "facebook": "",
