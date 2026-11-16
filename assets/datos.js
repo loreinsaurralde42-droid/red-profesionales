@@ -17,7 +17,7 @@ RED.CONFIG = {
   "logoLinea2": "Profesionales de la salud mental, del desarrollo y bienestar",
   "sitioUrl": "https://redprofesionales-chaco-vercel.vercel.app",
   "umamiWebsiteId": "70a296e1-5511-4dbc-a00a-a31bd7c4a5d9",
-  "umamiDominios": "redprofesionales-chaco-vercel.vercel.app",
+  "umamiDominios": "redprofesionales-chaco-vercel.vercel.app,redarandu.com.ar,www.redarandu.com.ar",
   "emailRed": "psicologa.lorenainsaurralde@gmail.com",
   "emailSumarse": "psicologa.lorenainsaurralde@gmail.com",
   "fechaLegales": "11 de noviembre de 2026",
