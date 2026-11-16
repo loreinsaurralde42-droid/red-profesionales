@@ -488,7 +488,6 @@ cuerpo = f"""{nav}<main id="contenido" class="pagina"><div class="contenedor"><d
 <p><em>Un ecosistema de sabiduría colectiva al servicio de la comunidad.</em></p>
 {botones("Soy profesional y quiero sumarme")}
 <p style="font-size:14px;color:#666">Podés mandarnos tus datos por email o escribirme directamente por WhatsApp.</p>
-<p><a class="btn-sec" href="formulario.html" data-evento="abrir-formulario">Completar el formulario de alta</a></p>
 
 <h2>Qué es ARANDU</h2>
 <p>ARANDU es un ecosistema para profesionales de la salud mental, el neurodesarrollo y el bienestar del Chaco, con proyección a todo el NEA. Su primer espacio es el directorio: hoy reúne {n_prof} profesionales de {n_disc} {"disciplina" if n_disc==1 else "disciplinas"} en {n_loc} {"localidad" if n_loc==1 else "localidades"}.</p>
@@ -518,7 +517,7 @@ cuerpo = f"""{nav}<main id="contenido" class="pagina"><div class="contenedor"><d
 <li>Respetar los saberes originarios que inspiran nuestro nombre.</li></ul>
 
 <h2>Cómo es la inscripción</h2>
-<ol><li>Completás el <a href="formulario.html">formulario</a> con tu formación, enfoque, población, modalidad, contacto y una presentación breve, y nos mandás una foto.</li>
+<ol><li>Completás el formulario con tu formación, enfoque, población, modalidad, contacto y una presentación breve, y nos mandás una foto.</li>
 <li>Nos enviás tu autorización escrita para publicar tu foto, tu matrícula, tus datos de contacto y tu presentación.</li>
 <li>Verificamos tu matrícula y revisamos la ficha con vos antes de publicarla.</li>
 <li>Publicamos tu perfil y te enviamos el enlace. ¡Bienvenida, bienvenido a la trama!</li></ol>
@@ -551,18 +550,6 @@ GENERADAS.append(pagina("profesionales.html", "Sumate a ARANDU | Red de profesio
     "ARANDU es un ecosistema de profesionales de la salud mental, el neurodesarrollo y el bienestar del Chaco y el NEA. Sumate: ficha verificada, página propia, contacto directo y comunidad de colegas.",
     cuerpo, activo="profesionales", ld=[ld_m]))
 
-
-# ---------- Formulario de alta para profesionales ----------
-_lore = next(p for p in PROFS if p["id"] == "insaurralde")
-_pobs = ["Niños", "Adolescentes", "Adultos", "Adultos mayores", "Parejas", "Familias", "Grupos"]
-form = open(os.path.join(FUENTE, "formulario.html"), encoding="utf-8").read()
-form = (form.replace("{{PROFESIONES}}", "".join(f"<option>{e(k)}</option>" for k in D["PROFESIONES"]))
-            .replace("{{POBLACIONES}}", "".join(f'<label class="op"><input type="checkbox" name="poblacion" value="{x}"> {x}</label>' for x in _pobs))
-            .replace("{{ICON_WA}}", ICON_WA).replace("{{WA_DESTINO}}", re.sub(r"\D", "", _lore["whatsapp"])).replace("{{MAIL}}", C["emailSumarse"]))
-nav, ld_m = migas("", [("Inicio", "index.html"), ("Sumate a ARANDU", "profesionales.html"), ("Formulario", "")])
-GENERADAS.append(pagina("formulario.html", "Formulario para sumarte a ARANDU | ARANDU",
-    "Formulario para profesionales que quieren sumarse a ARANDU: datos de la ficha, presentación y autorización.",
-    nav + form, activo="profesionales", ld=[ld_m], robots="noindex,follow"))
 
 # ---------- 404 ----------
 GENERADAS_404 = pagina("404.html", f"Página no encontrada | {C['nombreCorto']}", "La página que buscás no existe.",
