@@ -597,3 +597,43 @@ li .etq-prox{margin-right:6px;background:#fdf1d8;color:#8a5a00;font-weight:600}
 .logo-l1{font-size:20px;letter-spacing:.06em}
 .logo-l2{white-space:normal;max-width:300px;line-height:1.25}
 @media (max-width:600px){.logo-l2{max-width:190px;font-size:10.5px}.logo-l1{font-size:18px}}
+/* Formulario de alta */
+.form-intro{margin-bottom:10px}
+.form-pasos-res{list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:8px 18px;font-size:14.5px;color:#555}
+.aviso.suave{background:#eef6f8;border-color:#cfe5eb;color:#335}
+.form-alta{max-width:860px}
+.f-bloque{border:1px solid #e3e3e3;border-radius:14px;padding:22px 22px 18px;margin:0 0 22px;background:#fff}
+.f-bloque legend{font-size:20px;font-weight:600;color:#333;padding:0 8px;display:flex;align-items:center;gap:10px}
+.f-bloque legend span{width:30px;height:30px;border-radius:50%;background:#1b7389;color:#fff;display:inline-flex;align-items:center;justify-content:center;font-size:15px}
+.f-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 18px}
+.fc{margin:0 0 16px}
+.fc label,.fc .lbl{display:block;font-weight:600;color:#333;font-size:15px;margin:0 0 6px}
+.fc input:not([type=checkbox]),.fc select,.fc textarea{width:100%;border:1px solid #cfcfcf;border-radius:8px;padding:10px 12px;font:inherit;font-size:15.5px;color:#333;background:#fff;box-sizing:border-box}
+.fc input:not([type=checkbox]),.fc select{min-height:46px}
+.fc textarea{resize:vertical;line-height:1.5}
+.fc small,.ayuda{display:block;font-size:13.5px;color:#666;margin:5px 0 0;line-height:1.45}
+.fc .ayuda{margin:-2px 0 8px}
+.fc .error,.form-alta .error{border-color:#c0392b!important;background:#fff8f7}
+.opciones{display:flex;flex-wrap:wrap;gap:8px}
+.op{display:inline-flex;align-items:center;gap:8px;border:1px solid #d5d5d5;border-radius:999px;padding:8px 14px;font-size:15px;cursor:pointer;background:#fff}
+.op input{width:18px;height:18px;accent-color:#1b7389}
+.op-bloque{display:flex;align-items:flex-start;border-radius:10px;padding:12px 14px;margin:0 0 12px;line-height:1.5}
+.op-bloque input{margin-top:3px;flex:0 0 18px}
+.guia-aida{background:#f8f4f7;border-radius:12px;padding:16px 18px;margin:0 0 18px;font-size:15px}
+.guia-aida p{margin:0 0 10px}
+.si-no{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.si-no ul{margin:0;padding-left:18px;font-size:14.5px}
+.t-si,.t-no{font-weight:700;margin:0 0 4px!important}
+.t-si{color:#1b7389}.t-no{color:#8a3e7f}
+.aida label{display:flex;gap:10px;align-items:flex-start}
+.letra{flex:0 0 28px;width:28px;height:28px;border-radius:8px;background:#8a3e7f;color:#fff;display:inline-flex;align-items:center;justify-content:center;font-weight:700}
+.contador{font-weight:400;color:#888;font-size:13px;margin-left:auto}
+.vista-previa{border:1px dashed #b9d6de;border-radius:12px;padding:16px 18px;background:#fbfdfe}
+.vp-tit{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:#1b7389;margin:0 0 8px}
+.vp-vacia{color:#888;font-style:italic}
+.vp-aviso{background:#fdf1d8;color:#7a5200;border-radius:8px;padding:8px 12px;font-size:14px}
+.faltan{background:#fdecea;color:#a52a1d;border-radius:8px;padding:10px 14px;font-size:14.5px}
+.ok-msg{background:#e8f5ec;color:#1d6b38;border-radius:8px;padding:10px 14px;font-size:14.5px}
+.envio button{border:0;cursor:pointer;font:inherit;font-weight:600}
+.envio .btn-sec{background:#fff}
+@media (max-width:700px){.f-grid,.si-no{grid-template-columns:1fr}.f-bloque{padding:16px 14px}.envio{flex-direction:column}.envio button{width:100%}}
