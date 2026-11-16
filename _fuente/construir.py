@@ -546,7 +546,7 @@ cuerpo = f"""{nav}<main id="contenido" class="pagina"><div class="contenedor"><d
 {botones("Quiero sumarme")}
 </div>
 </div></div></main>"""
-GENERADAS.append(pagina("profesionales.html", "Sumate a ARANDU | Red de profesionales de la salud mental, del neurodesarrollo y bienestar",
+GENERADAS.append(pagina("profesionales.html", "Sumate a ARANDU | Profesionales de la salud mental, del desarrollo y bienestar",
     "ARANDU es un ecosistema de profesionales de la salud mental, el neurodesarrollo y el bienestar del Chaco y el NEA. Sumate: ficha verificada, página propia, contacto directo y comunidad de colegas.",
     cuerpo, activo="profesionales", ld=[ld_m]))
 
@@ -575,7 +575,7 @@ cuerpo = (plantilla_inicio.replace("{{BIENESTAR}}", bienestar_teaser).replace("{
           .replace("{{G_DIA}}", e(C["guardiaDiurna"])).replace("{{G_NOCHE}}", e(C["guardiaNocturna"]))
           .replace("{{G_DIA_TEL}}", re.sub(r"\D", "", C["guardiaDiurna"])).replace("{{G_NOCHE_TEL}}", re.sub(r"\D", "", C["guardiaNocturna"]))
           .replace("{{NOMBRE_RED}}", e(C["nombreRed"])))
-pagina("index.html", f"Psicólogos y profesionales de salud mental en el Chaco | {C['nombreCorto']}",
+pagina("index.html", f"{C['nombreRed']} | Chaco",
        "Encontrá psicólogos, fonoaudiólogos y profesionales de la salud mental y el desarrollo en Villa Ángela, Resistencia, Sáenz Peña y todo el Chaco. Atención presencial y online, contacto directo por WhatsApp.",
        cuerpo, activo="buscar", ld=ld_home, scripts=("inicio.js",))
 

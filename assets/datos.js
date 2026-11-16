@@ -8,20 +8,20 @@ var RED = {};
 
 /* Configuración general (el nombre de la Red se cambia SOLO acá) */
 RED.CONFIG = {
-  "nombreRed": "ARANDU: Red de profesionales de la salud mental, del neurodesarrollo y bienestar",
+  "nombreRed": "ARANDU: profesionales de la salud mental, del desarrollo y bienestar",
   "nombreCorto": "ARANDU",
   "logoLinea1": [
     "ARANDU",
     ""
   ],
-  "logoLinea2": "Red de profesionales de la salud mental, del neurodesarrollo y bienestar",
+  "logoLinea2": "Profesionales de la salud mental, del desarrollo y bienestar",
   "sitioUrl": "https://redprofesionales-chaco-vercel.vercel.app",
   "umamiWebsiteId": "70a296e1-5511-4dbc-a00a-a31bd7c4a5d9",
   "umamiDominios": "redprofesionales-chaco-vercel.vercel.app",
   "emailRed": "psicologa.lorenainsaurralde@gmail.com",
   "emailSumarse": "psicologa.lorenainsaurralde@gmail.com",
   "fechaLegales": "11 de noviembre de 2026",
-  "mensajeWhatsApp": "Hola, te escribo desde la web de ARANDU, Red de profesionales de la salud mental, del neurodesarrollo y bienestar. Quisiera consultar por un turno.",
+  "mensajeWhatsApp": "Hola, te escribo desde la web de ARANDU, profesionales de la salud mental, del desarrollo y bienestar. Quisiera consultar por un turno.",
   "asuntoEmail": "Consulta desde ARANDU",
   "guardiaDiurna": "362 461-8432",
   "guardiaNocturna": "362 481-4825",
