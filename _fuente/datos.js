@@ -220,16 +220,28 @@ RED.CATEGORIAS = [
     ]
   },
   {
-    "id": "infancias-adolescencias",
-    "nombre": "Infancias y adolescencias",
+    "id": "infancias",
+    "nombre": "Infancias",
     "icono": "🧒",
     "claves": [
-      "infancias",
-      "adolescen"
+      "\\binfancia",
+      "\\binfantil",
+      "\\bninos?\\b",
+      "\\bninas?\\b"
     ],
     "poblaciones": [
       "Bebés y primera infancia",
-      "Niños",
+      "Niños"
+    ]
+  },
+  {
+    "id": "adolescencias",
+    "nombre": "Adolescencias",
+    "icono": "🧑",
+    "claves": [
+      "adolescen"
+    ],
+    "poblaciones": [
       "Adolescentes"
     ]
   },
@@ -238,11 +250,8 @@ RED.CATEGORIAS = [
     "nombre": "Pareja y vínculos",
     "icono": "🤝",
     "claves": [
-      "pareja",
-      "vinculo",
-      "vincular",
-      "separacion",
-      "relaciones"
+      "\\bpareja",
+      "\\bseparacion"
     ],
     "poblaciones": [
       "Parejas"
