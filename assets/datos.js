@@ -1187,6 +1187,75 @@ RED.PROFESIONALES = [
     "email": "",
     "plan": "basico",
     "consentimiento": false
+  },
+  {
+    "id": "cardozo",
+    "slug": "ayelen-cardozo",
+    "nombre": "Ayelen Cardozo",
+    "profesion": "Psicopedagogía",
+    "titulo": "Lic. en Psicopedagogía (Universidad de la Cuenca del Plata)",
+    "matricula": "M.P. U N.º 381",
+    "verificado": false,
+    "rol": "",
+    "foto": "img/cardozo.jpg",
+    "provincia": "Chaco",
+    "localidad": "Villa Ángela",
+    "direccion": "Hungría 731, Villa Ángela",
+    "resumen": "Psicopedagoga. Acompaño a niños, niñas, adolescentes y sus familias en sus procesos de aprendizaje: evaluaciones, acompañamiento de trayectorias escolares y talleres.",
+    "presentacion": [
+      "¿Notás que a tu hijo o hija le cuesta aprender, sostener la atención en la escuela o se frustra con las tareas?",
+      "Soy Ayelen, licenciada en Psicopedagogía. Concibo el aprendizaje como un proceso complejo que involucra dimensiones cognitivas, emocionales, sociales y vinculares. Trabajo desde un abordaje psicopedagógico integral, con una mirada contextual, singular y centrada en las potencialidades de cada persona, con aportes de la neuroeducación, la perspectiva de derechos y la diversidad en las formas de aprender.",
+      "En cada proceso construimos un espacio de encuentro, escucha y acompañamiento, donde el juego, la exploración y las propuestas significativas se convierten en oportunidades para reconocer fortalezas, potenciar habilidades y desarrollar nuevas herramientas para aprender.",
+      "Considero fundamental el trabajo conjunto con las familias y la articulación con las instituciones educativas, construyendo puentes y estrategias compartidas que respeten las singularidades y acompañen cada trayectoria de aprendizaje y desarrollo desde una perspectiva integral e inclusiva.",
+      "Si querés consultar, escribime por WhatsApp y conversamos sobre cómo puedo acompañarlos."
+    ],
+    "enfoque": "Psicopedagógico integral",
+    "enfoqueDetalle": "Abordaje psicopedagógico integral, con aportes de la neuroeducación y la perspectiva de derechos",
+    "poblacion": [
+      "Niños",
+      "Adolescentes",
+      "Familias"
+    ],
+    "poblacionDetalle": "Niños, niñas y adolescentes; familias e instituciones educativas",
+    "areas": [
+      "Dificultades en el aprendizaje",
+      "Evaluación psicopedagógica",
+      "Acompañamiento de trayectorias escolares",
+      "Estimulación de habilidades cognitivas y funciones ejecutivas",
+      "Orientación y asesoramiento a familias",
+      "Orientación a instituciones educativas"
+    ],
+    "categorias": [],
+    "servicios": [
+      "Evaluaciones psicopedagógicas",
+      "Atención y acompañamiento psicopedagógico individual",
+      "Orientación y asesoramiento a familias",
+      "Orientación y acompañamiento a instituciones educativas",
+      "Articulación interdisciplinaria con profesionales",
+      "Acompañamiento de trayectorias escolares",
+      "Diseño de estrategias y recursos para favorecer los aprendizajes",
+      "Talleres psicopedagógicos para niños y adolescentes",
+      "Talleres de estimulación de habilidades cognitivas y funciones ejecutivas"
+    ],
+    "formacion": [],
+    "modalidad": [
+      "Presencial",
+      "Online"
+    ],
+    "modalidadDetalle": "",
+    "idiomas": "Español",
+    "accesibilidad": "Planta baja",
+    "atencion": "Particular y obras sociales (todas, excepto INSSSEP). Incluir Salud para pacientes con CUD.",
+    "reintegro": true,
+    "honorarios": "$40.000",
+    "disponibilidad": "Lunes a viernes, de 8 a 12:30 y de 14 a 19:30",
+    "whatsapp": "5493735522819",
+    "telefonos": "",
+    "instagram": "psicopedagoga_ac",
+    "facebook": "",
+    "email": "Aye_cardozo_94@hotmail.com",
+    "plan": "basico",
+    "consentimiento": false
   }
 ];
 
