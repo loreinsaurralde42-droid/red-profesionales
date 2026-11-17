@@ -910,10 +910,10 @@ RED.PROFESIONALES = [
     "enfoqueDetalle": "Enfoque integral con aportes de la psicogenealogía y la psicobiología social. Sexología clínica.",
     "poblacion": [
       "Adolescentes",
-      "Jóvenes",
       "Adultos"
     ],
-    "poblacionDetalle": "Mujeres desde los 16 años",
+    "restriccion": "Solo mujeres, desde los 16 años",
+    "poblacionDetalle": "Mujeres adolescentes (desde los 16 años) y adultas",
     "areas": [
       "Mujeres que transitan enfermedades (crónicas, inmunológicas, adquiridas, etc.)",
       "Dolencias corporales",

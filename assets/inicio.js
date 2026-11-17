@@ -151,7 +151,7 @@ function tarjeta(p){
       </div>
     </div>
     <p class="t-resumen">${esc(p.resumen)}</p>
-    <p class="t-meta"><span>📍 ${esc(p.localidad)}</span><span>${esc(modalidad(p))}</span></p>
+    <p class="t-meta"><span>📍 ${esc(p.localidad)}</span><span>${esc(modalidad(p))}</span>${p.restriccion?`<span class="t-restr">${esc(p.restriccion)}</span>`:""}</p>
     ${motivos?`<ul class="t-motivos" aria-label="Trabaja con">${motivos}</ul>`:""}
     <div class="t-acciones">${botonContacto(p)}<a class="btn-sec" href="${url}">Ver perfil completo</a></div>
   </article>`;

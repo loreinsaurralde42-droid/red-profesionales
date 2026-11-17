@@ -238,7 +238,7 @@ def pagina_profesional(p):
      <div><div class="t-sellos">{etq_prof(p)}{f'<span class="sello-fund">★ {e(p["rol"])}</span>' if p.get("rol") else ""}</div>
       <h1>{e(p["nombre"])}</h1><p class="tit">{e(p["titulo"])}</p>
       {sello_html(p)} <p class="verif-nota">{verif} <a href="{base}profesionales.html#verificacion">Cómo verificamos</a></p>
-      <p class="t-meta" style="margin-top:8px"><span>📍 {e(p["localidad"])}, {e(p["provincia"])}</span><span>{e(modalidad_txt(p))}</span></p></div>
+      <p class="t-meta" style="margin-top:8px"><span>📍 {e(p["localidad"])}, {e(p["provincia"])}</span><span>{e(modalidad_txt(p))}</span>{f'<span class="t-restr">{e(p["restriccion"])}</span>' if p.get("restriccion") else ""}</p></div>
     </div>
     <section class="p-bloque" aria-labelledby="h-pres"><h2 id="h-pres">Presentación</h2>{pres}</section>
     {f'<section class="p-bloque" aria-labelledby="h-form"><h2 id="h-form">Formación y especializaciones</h2><ul>{formacion}</ul></section>' if formacion else ""}
@@ -292,7 +292,7 @@ def tarjeta_estatica(p, base):
     return f'''<article class="tarjeta" data-prof-id="{p["id"]}" data-origen="localidad">
     <div class="t-cab">{foto_html(p, base, "t-foto")}<div class="t-id"><h3 class="t-nombre"><a href="{base}profesional/{p["slug"]}.html">{e(p["nombre"])}</a></h3><div class="t-sellos">{etq_prof(p)}</div>{sello_html(p)}</div></div>
     <p class="t-resumen">{e(p["resumen"])}</p>
-    <p class="t-meta"><span>📍 {e(p["localidad"])}</span><span>{e(modalidad_txt(p))}</span></p>
+    <p class="t-meta"><span>📍 {e(p["localidad"])}</span><span>{e(modalidad_txt(p))}</span>{f'<span class="t-restr">{e(p["restriccion"])}</span>' if p.get("restriccion") else ""}</p>
     {f'<ul class="t-motivos">{mot}</ul>' if mot else ""}
     <div class="t-acciones">{boton_contacto(p)}<a class="btn-sec" href="{base}profesional/{p["slug"]}.html">Ver perfil completo</a></div></article>'''
 
