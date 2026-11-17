@@ -637,3 +637,16 @@ li .etq-prox{margin-right:6px;background:#fdf1d8;color:#8a5a00;font-weight:600}
 .envio button{border:0;cursor:pointer;font:inherit;font-weight:600}
 .envio .btn-sec{background:#fff}
 @media (max-width:700px){.f-grid,.si-no{grid-template-columns:1fr}.f-bloque{padding:16px 14px}.envio{flex-direction:column}.envio button{width:100%}}
+/* Talleres y saberes */
+.tl-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:22px;margin-top:10px}
+.tl-card{background:#fff;border:1px solid #e3e3e3;border-radius:14px;overflow:hidden;display:flex;flex-direction:column}
+.tl-img{width:100%;aspect-ratio:16/9;object-fit:cover}
+.tl-cuerpo{padding:18px 20px 20px;display:flex;flex-direction:column;gap:8px;flex:1}
+.tl-cuerpo h2{font-size:21px;margin:0;color:#333}
+.tl-cuerpo p{margin:0;color:#555}
+.tl-tipo{align-self:flex-start;background:#f3e6f0;color:#8a3e7f;font-weight:600;font-size:13px;padding:3px 10px;border-radius:999px}
+.tl-datos{display:grid;grid-template-columns:auto 1fr;gap:4px 12px;margin:6px 0 10px;font-size:14.5px}
+.tl-datos dt{font-weight:600;color:#1b7389}.tl-datos dd{margin:0;color:#444}
+.tl-cuerpo .btn-buscar{margin-top:auto;text-decoration:none;justify-content:center;text-align:center}
+.tl-vacio{background:#fff;border:1px dashed #cfe5eb;border-radius:14px;padding:30px;text-align:center;max-width:640px;margin:10px auto 0}
+.tl-vacio p{color:#555;margin:14px 0 18px}

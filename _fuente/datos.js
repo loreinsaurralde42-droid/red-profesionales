@@ -1181,4 +1181,28 @@ RED.PROFESIONALES = [
   }
 ];
 
+/* ---------------------------------------------------------------
+   TALLERES Y SABERES: talleres, cursos y programas.
+   Para agregar una propuesta, copiá el ejemplo comentado y completalo.
+   Campos: tipo ("Taller" | "Curso" | "Programa"), titulo, descripcion,
+   paraQuien, modalidad, lugar, fecha (texto libre), duracion,
+   valor (ej. "$15.000" o "Gratuito"), facilitador, inscripcion (enlace), imagen ("img/..." opcional).
+   --------------------------------------------------------------- */
+RED.TALLERES = [
+  /* {
+    "tipo": "Taller",
+    "titulo": "Nombre del taller",
+    "descripcion": "Qué se va a trabajar y qué se llevan quienes participen.",
+    "paraQuien": "Madres, padres y cuidadores",
+    "modalidad": "Presencial",
+    "lugar": "Villa Ángela",
+    "fecha": "Sábado 6 de diciembre, 10 h",
+    "duracion": "2 horas",
+    "valor": "Gratuito",
+    "facilitador": "Nombre y profesión",
+    "inscripcion": "https://wa.me/549...",
+    "imagen": ""
+  } */
+];
+
 if (typeof module !== "undefined") module.exports = RED;

@@ -85,6 +85,7 @@ def cabecera(base, activo=""):
       {a("index.html#profesionales", "Buscar profesionales", "buscar")}
       {a("index.html#motivos", "¿Qué te está pasando?", "motivos")}
       {a("bienestar/index.html", "Bienestar y orientación", "bienestar")}
+      {a("talleres.html", "Talleres y saberes", "talleres")}
       {a("profesionales.html", "Para profesionales", "profesionales")}
       <div class="desplegable"><button type="button" aria-haspopup="true" aria-expanded="false">ARANDU</button>
         <div class="sub">{a("nosotros.html","Nosotros","nosotros")}{a("privacidad.html","Privacidad","privacidad")}{a("terminos.html","Términos y condiciones","terminos")}</div></div>
@@ -100,7 +101,7 @@ def pie(base):
     <div class="cols">
       <div><h2>{e(C["nombreRed"])}</h2><p>Un directorio regional que conecta a las personas con profesionales de la salud mental y el desarrollo. Empezamos por el Chaco y vamos hacia todo el NEA.</p>
         <p><strong style="color:#fff">¿Urgencia?</strong> 911 · 107 · Guardia de salud mental {e(C["guardiaDiurna"])} (día) / {e(C["guardiaNocturna"])} (noche)</p></div>
-      <div><h2>Personas</h2><ul><li><a href="{base}index.html#profesionales">Buscar profesionales</a></li><li><a href="{base}index.html#motivos">¿Qué te está pasando?</a></li><li><a href="{base}bienestar/index.html">Bienestar y orientación</a></li>{locs}</ul></div>
+      <div><h2>Personas</h2><ul><li><a href="{base}index.html#profesionales">Buscar profesionales</a></li><li><a href="{base}index.html#motivos">¿Qué te está pasando?</a></li><li><a href="{base}bienestar/index.html">Bienestar y orientación</a></li><li><a href="{base}talleres.html">Talleres y saberes</a></li>{locs}</ul></div>
       <div><h2>Profesionales</h2><ul><li><a href="{base}profesionales.html">Sumarme a ARANDU</a></li><li><a href="{base}profesionales.html#verificacion">Cómo verificamos</a></li><li><a href="mailto:{e(C["emailSumarse"])}">{e(C["emailSumarse"])}</a></li></ul></div>
       <div><h2>ARANDU</h2><ul><li><a href="{base}nosotros.html">Nosotros</a></li><li><a href="{base}privacidad.html">Política de privacidad</a></li><li><a href="{base}terminos.html">Términos y condiciones</a></li></ul></div>
     </div>
@@ -550,6 +551,29 @@ GENERADAS.append(pagina("profesionales.html", "Sumate a ARANDU | Profesionales d
     "ARANDU es un ecosistema de profesionales de la salud mental, el neurodesarrollo y el bienestar del Chaco y el NEA. Sumate: ficha verificada, página propia, contacto directo y comunidad de colegas.",
     cuerpo, activo="profesionales", ld=[ld_m]))
 
+
+# ---------- Talleres y saberes ----------
+TALLERES = D.get("TALLERES") or []
+def tarjeta_taller(t):
+    filas = [("Para quién", t.get("paraQuien")), ("Modalidad", " · ".join(x for x in [t.get("modalidad"), t.get("lugar")] if x)),
+             ("Fecha", t.get("fecha")), ("Duración", t.get("duracion")), ("Valor", t.get("valor")), ("Facilita", t.get("facilitador"))]
+    dl = "".join(f"<dt>{e(k)}</dt><dd>{e(v)}</dd>" for k, v in filas if v)
+    img = f'<img src="{e(t["imagen"])}" alt="" class="tl-img">' if t.get("imagen") else ""
+    btn = f'<a class="btn-buscar" href="{e(t["inscripcion"])}" target="_blank" rel="noopener" data-evento="inscripcion-taller" data-dato="{e(t.get("titulo"))}">Quiero participar</a>' if t.get("inscripcion") else ""
+    return f'<article class="tl-card">{img}<div class="tl-cuerpo"><span class="tl-tipo">{e(t.get("tipo") or "Taller")}</span><h2>{e(t.get("titulo"))}</h2><p>{e(t.get("descripcion"))}</p><dl class="tl-datos">{dl}</dl>{btn}</div></article>'
+nav, ld_m = migas("", [("Inicio", "index.html"), ("Talleres y saberes", "")])
+if TALLERES:
+    contenido_t = '<div class="tl-grid">' + "".join(tarjeta_taller(t) for t in TALLERES) + "</div>"
+else:
+    contenido_t = ('<div class="tl-vacio"><span class="etq-prox">Próximamente</span>'
+                   '<p>Estamos preparando las primeras propuestas. Muy pronto vas a encontrar acá talleres, cursos y programas para acompañarte en tu bienestar.</p>'
+                   '<a class="btn-sec" href="index.html#profesionales">Mientras tanto, buscá un profesional</a></div>')
+cuerpo = (f'{nav}<main id="contenido" class="pagina"><div class="contenedor">'
+          f'<div class="pagina-texto"><h1>Talleres y saberes</h1><p class="bajada">Talleres, cursos y programas.</p></div>'
+          f'{contenido_t}</div></main>')
+GENERADAS.append(pagina("talleres.html", f"Talleres y saberes | {C['nombreCorto']}",
+    "Talleres, cursos y programas de ARANDU para la comunidad: salud mental, desarrollo y bienestar.",
+    cuerpo, activo="talleres", ld=[ld_m]))
 
 # ---------- 404 ----------
 GENERADAS_404 = pagina("404.html", f"Página no encontrada | {C['nombreCorto']}", "La página que buscás no existe.",
