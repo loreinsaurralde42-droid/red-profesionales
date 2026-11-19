@@ -1256,6 +1256,78 @@ RED.PROFESIONALES = [
     "email": "Aye_cardozo_94@hotmail.com",
     "plan": "basico",
     "consentimiento": false
+  },
+  {
+    "id": "ortigoza",
+    "slug": "ornella-ortigoza",
+    "nombre": "Ornella Ortigoza",
+    "profesion": "Psicología",
+    "titulo": "Lic. en Psicología (Universidad de la Cuenca del Plata)",
+    "matricula": "M.P. 1062",
+    "verificado": false,
+    "rol": "",
+    "foto": "img/ortigoza.jpg",
+    "provincia": "Chaco",
+    "localidad": "Presidencia Roque Sáenz Peña",
+    "direccion": "Instituto Eros, M. Jajan 1143 (calle 27 entre 24 y 26, Centro), Presidencia Roque Sáenz Peña",
+    "resumen": "Psicóloga infantojuvenil y de adultos, con orientación psicoanalítica. Acompaño a niños, adolescentes y adultos, posibilitando un espacio para el juego, la palabra y la elaboración de las experiencias de vida.",
+    "presentacion": [
+      "¿Alguna vez sentiste que “algo” te pasa, pero no encontrás las palabras para decirlo? ¿Sentís que hay situaciones que se repiten, emociones que desbordan o pensamientos que no dejan de insistir?",
+      "No necesitás saber exactamente qué te pasa para empezar. Hay malestares que no desaparecen simplemente porque nos propongamos “estar bien”.",
+      "Quizás necesitás un lugar donde frenar el ruido, dejar de exigirte respuestas, donde empezar a escucharte y ser escuchado, para dar lugar a tu malestar.",
+      "Trabajo desde una escucha que aloja singularidades, historias y preguntas, sin reducir el sufrimiento psíquico a un síntoma o diagnóstico, ni pensarlo por fuera de su contexto, sino como expresión de aquello que quizás aún no ha podido ser hablado ni elaborado.",
+      "Si algo de esto te resuena y sentís que es el momento de pedir ayuda, te invito a escribirme y construir un espacio juntos."
+    ],
+    "enfoque": "Psicoanálisis",
+    "enfoqueDetalle": "Psicoanálisis",
+    "poblacion": [
+      "Niños",
+      "Adolescentes",
+      "Adultos"
+    ],
+    "poblacionDetalle": "",
+    "areas": [
+      "Ansiedad",
+      "Depresión",
+      "Consumos problemáticos",
+      "Duelos",
+      "Conducta e ideación suicida",
+      "Orientación a padres y referentes",
+      "Dificultades en el aprendizaje",
+      "Bullying",
+      "Problemáticas de conducta",
+      "Trastornos de la conducta alimentaria"
+    ],
+    "categorias": [],
+    "servicios": [
+      "Psicoterapia",
+      "Orientación vocacional",
+      "Evaluaciones psicolaborales y de aptitud psíquica",
+      "Informes psicológicos"
+    ],
+    "formacion": [
+      "Lic. en Psicología, Universidad de la Cuenca del Plata",
+      "Especialización en Salud Mental Comunitaria, UNNE (Resistencia, Chaco), 2025",
+      "Posgrado en Clínica Psicoanalítica, Fundación Buenos Aires, 2022"
+    ],
+    "modalidad": [
+      "Presencial",
+      "Online"
+    ],
+    "modalidadDetalle": "",
+    "idiomas": "Español",
+    "accesibilidad": "Consultorios en planta alta y planta baja",
+    "atencion": "Particular",
+    "reintegro": true,
+    "honorarios": "$40.000 por sesión",
+    "disponibilidad": "Lunes, martes y jueves de 8 a 11:30 y de 17:30 a 19:30 · Miércoles y viernes desde las 15:30",
+    "whatsapp": "5493624757717",
+    "telefonos": "",
+    "instagram": "psi.ornellaortigoza",
+    "facebook": "",
+    "email": "ornellaortigozapsi@gmail.com",
+    "plan": "basico",
+    "consentimiento": true
   }
 ];
 
