@@ -354,11 +354,12 @@ RED.PROFESIONALES = [
     "direccion": "",
     "resumen": "Practicante del Psicoanálisis. Comenzar un análisis puede ser hacer, de aquello que se repite y se padece, una pregunta.",
     "presentacion": [
-      "¿Cuándo comenzar un análisis?",
-      "Cuando algo te molesta y no lo podés resolver. Cuando eso insiste, vuelve y vuelve… y parece que no hay forma de hacer algo con ello.",
+      "Lo que se repite también tiene algo para decir. Vuelve y vuelve, por más que intentes dejarlo atrás.",
+      "Quizás sea el momento de comenzar un análisis: cuando algo te molesta y no lo podés resolver, y parece que no hay forma de hacer algo con ello.",
       "Cuando, por más proyectos que armes, planes que construyas o intentos que hagas por seguir adelante, eso aparece, vuelve y te rompe. Y ahí estás, una vez más, transitando la misma repetición.",
       "Pero quizás sea justamente esa insistencia, ese encuentro una y otra vez con lo mismo, lo que abra la puerta a una pregunta: ¿Qué me tiene tomado? ¿Qué es eso que no puedo soltar? ¿Por qué, a pesar de mis intentos, vuelvo a encontrarme con lo mismo?",
-      "Tal vez comenzar un análisis tenga que ver con eso: con hacer de aquello que se repite y se padece, una pregunta. Porque no se trata solo de que algo deje de volver, sino de poder escuchar qué hay de uno en eso que insiste."
+      "Tal vez comenzar un análisis tenga que ver con eso: con hacer de aquello que se repite y se padece, una pregunta. Porque no se trata solo de que algo deje de volver, sino de poder escuchar qué hay de uno en eso que insiste.",
+      "Si sentís que es tu momento de empezar, escribime y lo pensamos juntos."
     ],
     "enfoque": "Psicoanálisis",
     "enfoqueDetalle": "Psicoanálisis de orientación lacaniana",
@@ -413,10 +414,10 @@ RED.PROFESIONALES = [
     "direccion": "Sarmiento 436, Villa Ángela",
     "resumen": "Terapia cognitivo-conductual para adolescentes y adultos: ansiedad, estrés, depresión, autoestima y habilidades sociales.",
     "presentacion": [
-      "¿Sentís que la ansiedad, el estrés o el desánimo te están ganando terreno?",
+      "Imaginá terminar el día con la cabeza más tranquila y con herramientas concretas para lo que hoy te preocupa.",
       "Soy María José, psicóloga, y trabajo desde la Terapia Cognitivo-Conductual con adolescentes y adultos. Es un enfoque práctico, que te ayuda a entender cómo se conectan lo que pensás, lo que sentís y lo que hacés.",
       "En terapia podemos trabajar la ansiedad y el manejo del estrés, la depresión, la autoestima y las habilidades sociales, para que recuperes herramientas concretas para tu día a día. Si sos adolescente, o acompañás a uno, también es un espacio para atravesar esa etapa con más contención.",
-      "Atiendo de forma presencial en Sarmiento 436, Villa Ángela, y también online. Escribime y coordinamos tu primera consulta."
+      "Atiendo de forma presencial en Sarmiento 436, Villa Ángela, y también online. Escribime y vemos juntos por dónde empezar."
     ],
     "enfoque": "Cognitivo-conductual",
     "enfoqueDetalle": "Terapia Cognitivo-Conductual (TCC)",
@@ -472,10 +473,12 @@ RED.PROFESIONALES = [
     "direccion": "",
     "resumen": "Acompaño a adolescentes, adultos y parejas en procesos de autoconocimiento, bienestar emocional y vínculos más saludables, incluyendo el abordaje de la sexualidad.",
     "presentacion": [
+      "El bienestar también se construye en los vínculos y en la forma en que habitamos nuestra sexualidad.",
       "Soy Karina Aguirre, Licenciada en Psicología y Sexóloga Clínica.",
       "Acompaño a adolescentes, adultos y parejas en sus procesos de autoconocimiento, bienestar emocional y construcción de vínculos más saludables.",
       "Concibo la terapia como un espacio de escucha, confianza y reflexión, donde cada persona pueda sentirse acompañada, comprender aquello que le sucede y encontrar nuevas herramientas para afrontar sus dificultades.",
-      "Desde una mirada integral, incorporo también el abordaje de la sexualidad, promoviendo una vivencia más libre, consciente y saludable."
+      "Desde una mirada integral, incorporo también el abordaje de la sexualidad, promoviendo una vivencia más libre, consciente y saludable.",
+      "Te espero para conversar sobre lo que estés atravesando."
     ],
     "enfoque": "Integrativo",
     "enfoqueDetalle": "Psicoterapia de orientación psicoanalítica con enfoque integrativo",
@@ -536,7 +539,7 @@ RED.PROFESIONALES = [
     "resumen": "Terapia cognitiva para niños, adolescentes y adultos. También realizo evaluaciones psicológicas, aptos psicológicos y psicodiagnósticos.",
     "presentacion": [
       "A veces lo que nos pasa no se resuelve solo, y está bien pedir ayuda para entenderlo.",
-      "Soy Victoria, psicóloga, y trabajo desde la Terapia Cognitivo-Conductual con niños, adolescentes y adultos. Además, me formé en Psicoterapia Cognitiva Integrativa y en Psicodiagnóstico.",
+      "Soy Victoria, psicóloga. Me formé en Terapia Cognitivo-Conductual, Psicoterapia Cognitiva Integrativa y Psicodiagnóstico, y acompaño a niños, adolescentes y adultos.",
       "Acompaño situaciones de ansiedad, depresión, crisis vitales y vínculos, y también consultas sobre crianza y problemas de conducta en los más chicos. Si necesitás una evaluación psicológica, un apto psicológico o un psicodiagnóstico, también podés hacerlo conmigo.",
       "Atiendo de forma presencial en Villa Ángela y online, y emito factura para que gestiones el reintegro con tu obra social. Escribime y coordinamos un turno."
     ],
@@ -597,9 +600,11 @@ RED.PROFESIONALES = [
     "direccion": "Donovan 95 (Espacio Psi), Villa Ángela",
     "resumen": "Terapia cognitiva: un espacio de escucha y reflexión, sin juicios, para revisar pensamientos, emociones y conductas y encontrar nuevas formas de afrontar lo que preocupa.",
     "presentacion": [
-      "Hola, me llamo Gastón y soy psicólogo. Trabajo desde el enfoque de la Terapia Cognitiva, una perspectiva que invita, a través del diálogo, a detenernos y revisar nuestros pensamientos, emociones y conductas.",
+      "Detenerse un momento puede cambiar la forma de mirar el propio camino.",
+      "Soy Gastón, psicólogo, y trabajo desde el enfoque de la Terapia Cognitiva, una perspectiva que invita, a través del diálogo, a detenernos y revisar nuestros pensamientos, emociones y conductas.",
       "La idea es poder tomar conciencia de lo que nos pasa, reconocer dónde estamos y hacia dónde queremos ir. A veces, comprender nuestra manera de pensar, sentir y actuar es el primer paso para empezar a generar cambios.",
-      "Se trata de construir un espacio de escucha y reflexión, sin juicios, donde podamos conocernos mejor y encontrar nuevas formas de afrontar aquello que nos preocupa."
+      "Se trata de construir un espacio de escucha y reflexión, sin juicios, donde podamos conocernos mejor y encontrar nuevas formas de afrontar aquello que nos preocupa.",
+      "Si querés empezar ese recorrido, escribime."
     ],
     "enfoque": "Cognitivo-conductual",
     "enfoqueDetalle": "Terapia Cognitiva",
@@ -655,7 +660,7 @@ RED.PROFESIONALES = [
       "Crecer no siempre es fácil, ni para quienes crecen ni para quienes los acompañan.",
       "Soy Selena, psicóloga, y hago psicoterapia con infancias, adolescentes y jóvenes.",
       "Te ofrezco un espacio seguro y humano para tu proceso: un lugar para poner en palabras lo que te pasa, a tu ritmo.",
-      "Atiendo de forma presencial en el Policonsultorio KIMED (San Martín 623, Villa Ángela) y también de forma virtual. Escribime y coordinamos una primera consulta."
+      "Atiendo de forma presencial en el Policonsultorio KIMED (San Martín 623, Villa Ángela) y también de forma virtual. Cuando quieras, escribime: estoy para escucharte."
     ],
     "enfoque": "",
     "enfoqueDetalle": "",
@@ -785,9 +790,9 @@ RED.PROFESIONALES = [
     "presentacion": [
       "Mi nombre es Luciana. Soy psicóloga, mamá y una persona con discapacidad motriz, con amplia experiencia en infancias, discapacidad y familia.",
       "Hace más de 15 años que contengo, asesoro y acompaño a familias que reciben un diagnóstico inesperado.",
-      "Acompaño a niños, adolescentes y familias a atravesar momentos difíciles, dentro de un espacio terapéutico seguro, respetando el proceso y su ritmo. Trabajo ansiedad, autoestima, vínculos, crianza y el impacto emocional que trae convivir con un diagnóstico de discapacidad.",
+      "Acompaño a niños, adolescentes y familias a atravesar momentos difíciles, en un espacio terapéutico que respeta los tiempos de cada uno. Trabajo ansiedad, autoestima, vínculos, crianza y el impacto emocional que trae convivir con un diagnóstico de discapacidad.",
       "Estoy en Villa Ángela, Chaco, aunque podés comunicarte por cualquier consulta de manera virtual.",
-      "Si estás buscando un lugar para hablar de lo que te pasa y encontrar herramientas reales para el día a día, escribime.",
+      "Si estás buscando un lugar para hablar de lo que te pasa y encontrar recursos que te sirvan en lo cotidiano, escribime.",
       "Tu bienestar emocional es una prioridad."
     ],
     "enfoque": "",
@@ -901,7 +906,7 @@ RED.PROFESIONALES = [
     "direccion": "Policonsultorio de Fertilidad y Tocoginecología, Remedios de Escalada 511, Resistencia",
     "resumen": "Acompaño a mujeres que transitan enfermedades, dolencias corporales o dificultades en su sexualidad, con un abordaje integral que conecta mente, cuerpo, emociones y vínculos.",
     "presentacion": [
-      "¿Una enfermedad, un dolor en el cuerpo o una dificultad en tu sexualidad te están quitando las ganas y la tranquilidad?",
+      "El cuerpo también habla. A veces lo hace a través de una enfermedad, un dolor que no se va o una dificultad en la sexualidad que quita las ganas y la tranquilidad.",
       "Soy Sabrina Cuadra Svriz, psicóloga con formación en psicobiología, psicogenealogía y sexología clínica. Acompaño a mujeres que transitan enfermedades, dolencias corporales o disfunciones sexuales que les generan angustia y padecimiento psíquico, o que les dificultan la vida cotidiana.",
       "Mi abordaje es integrativo, porque mente, cuerpo, emociones y vínculos están conectados, y porque la historia de vida y los patrones transgeneracionales también influyen en la salud actual. Por eso creo programas terapéuticos adaptados a cada mujer, a su entorno y a lo que está viviendo, y la acompaño en cada paso de su proceso de transformación, con herramientas pensadas para ella.",
       "Atiendo online y de forma presencial en Resistencia. Escribime y empecemos a recorrer este camino juntas."
@@ -962,10 +967,10 @@ RED.PROFESIONALES = [
     "direccion": "Entre Terapias – Servicio de Fonoaudiología, Villa Ángela",
     "resumen": "Fonoaudiología con orientación neurolingüística y en motricidad orofacial: lenguaje, habla, lectoescritura, respiración y deglución, desde la infancia hasta la adultez.",
     "presentacion": [
-      "¿Tu hijo o hija comprende todo lo que le decís, pero cuando intenta hablar cuesta entender lo que quiere expresar? A veces los chicos saben perfectamente lo que quieren comunicar, pero encuentran dificultades para expresarlo con claridad.",
+      "Entender todo y no poder decirlo como uno quiere: eso les pasa a muchos chicos. Saben perfectamente lo que quieren comunicar, y aun así les cuesta expresarlo con claridad.",
       "Soy Fiorella Cinat, Licenciada en Fonoaudiología por la Universidad Nacional de Córdoba. Trabajo desde un enfoque integral, con orientación neurolingüística y especial interés en la Motricidad Orofacial, y acompaño a niños, adolescentes, adultos y adultos mayores en el desarrollo y el fortalecimiento de su comunicación, su lenguaje y su habla.",
       "La comunicación se construye y se desarrolla. Por eso mi práctica se centra en las necesidades de cada paciente, con evaluaciones y tratamientos individualizados que favorecen el lenguaje y las funciones orofaciales y promueven una mejor calidad de vida. Cada persona tiene su propio camino y merece ser escuchada, comprendida y acompañada.",
-      "¿Tenés dudas o querés saber si una evaluación fonoaudiológica puede ayudar? Escribime y conversemos sobre tu consulta."
+      "Si tenés dudas sobre si una evaluación fonoaudiológica puede ayudar, escribime y conversamos sobre tu consulta."
     ],
     "enfoque": "",
     "enfoqueDetalle": "Neurolingüística y Motricidad Orofacial",
@@ -1027,10 +1032,10 @@ RED.PROFESIONALES = [
     "direccion": "",
     "resumen": "Terapia cognitivo-conductual para adolescentes y adultos: un espacio seguro y de confianza para darle sentido a lo que te pasa y encontrar nuevas formas de atravesarlo.",
     "presentacion": [
-      "¿Hay algo que hoy te duele, te pesa o no terminás de entender?",
+      "Ponerle palabras a lo que duele ya es empezar a transformarlo.",
       "Soy Mariana Carauni Ríos, psicóloga. Trabajo desde la orientación cognitivo-conductual con adolescentes y adultos. Soy especialista en psicología forense y jurídica, y diplomada en perspectiva de género y diversidades.",
       "Te doy la bienvenida a un espacio pensado para vos, donde puedas sentirte seguro/a y en confianza. Juntos/as vamos a ir dándole sentido a lo que te pasa y a encontrar nuevas formas de atravesarlo.",
-      "Escribime por WhatsApp y coordinamos tu primera consulta."
+      "Escribime por WhatsApp: a veces el primer paso es solo un mensaje."
     ],
     "enfoque": "Cognitivo-conductual",
     "enfoqueDetalle": "Orientación cognitivo-conductual",
@@ -1080,10 +1085,10 @@ RED.PROFESIONALES = [
     "direccion": "Ejército de los Andes 1352, Presidencia Roque Sáenz Peña",
     "resumen": "Terapia cognitivo-conductual para jóvenes y adultos: ansiedad, depresión, duelos, separaciones y conflictos de pareja. También evaluaciones, aptos psicológicos y orientación vocacional.",
     "presentacion": [
-      "¿Sentís que la ansiedad, la tristeza o un momento difícil te están desbordando?",
+      "La ansiedad y la tristeza están entre los motivos de consulta más frecuentes en salud mental. Y tienen tratamiento.",
       "Soy Fanny Buralli, psicóloga egresada de la Universidad Nacional de Córdoba, con especialidad en terapia cognitivo-conductual y en salud mental. Acompaño a jóvenes y adultos.",
-      "Trabajo con ansiedad, depresión, psicosis, conflictos de pareja, separaciones, duelos y todas las situaciones que generan malestar psíquico, con un enfoque práctico que te ayuda a entender lo que te pasa y a encontrar herramientas para tu día a día. También realizo evaluaciones, aptos psicológicos y orientación vocacional.",
-      "Atiendo de forma presencial en Presidencia Roque Sáenz Peña y también online. Escribime y coordinamos tu primera consulta."
+      "Trabajo con ansiedad, depresión, psicosis, conflictos de pareja, separaciones, duelos y todas las situaciones que generan malestar psíquico, con un abordaje orientado a que comprendas lo que te pasa y recuperes recursos para sostenerte. También realizo evaluaciones, aptos psicológicos y orientación vocacional.",
+      "Atiendo de forma presencial en Presidencia Roque Sáenz Peña y también online. Mandame un mensaje y te cuento cómo trabajo."
     ],
     "enfoque": "Cognitivo-conductual",
     "enfoqueDetalle": "Terapia cognitivo-conductual",
@@ -1142,11 +1147,11 @@ RED.PROFESIONALES = [
     "direccion": "Mitre 115, Consultorios Médicos Salud, Villa Ángela",
     "resumen": "Terapia cognitivo-conductual con niños, adolescentes y adultos. Clínica infantojuvenil, orientación a familias, regulación emocional, duelo y crisis. También aptos psicológicos y psicodiagnóstico.",
     "presentacion": [
-      "¿Estás buscando un espacio de escucha y acompañamiento para tu hijo, tu familia o para vos?",
-      "Será un placer acompañarte. Soy Ronit, licenciada en Psicología, con orientación cognitivo-conductual. Mi principal área de trabajo es la clínica infantojuvenil y el acompañamiento a las familias, un ámbito que disfruto especialmente.",
+      "Acompañar a los chicos y a sus familias es lo que más disfruto de mi trabajo.",
+      "Soy Ronit, licenciada en Psicología, con orientación cognitivo-conductual, y la clínica infantojuvenil es mi principal área de trabajo. Acompaño a cada niño, a su familia y también a quienes llegan por sí mismos buscando un espacio de escucha.",
       "Mi trabajo se centra en construir vínculos terapéuticos basados en la confianza y la empatía, utilizando el juego, la psicoeducación y estrategias específicas según las necesidades de cada persona.",
       "También acompaño a adultos en el abordaje de ansiedad, depresión, estrés, duelos y situaciones de crisis, promoviendo el reconocimiento y desarrollo de recursos personales.",
-      "Si querés realizar una consulta, escribime por WhatsApp."
+      "Contame qué está pasando y vemos juntos cómo acompañarlos."
     ],
     "enfoque": "Cognitivo-conductual",
     "enfoqueDetalle": "Terapia cognitivo-conductual (TCC)",
@@ -1203,7 +1208,7 @@ RED.PROFESIONALES = [
     "direccion": "Hungría 731, Villa Ángela",
     "resumen": "Psicopedagoga. Acompaño a niños, niñas, adolescentes y sus familias en sus procesos de aprendizaje: evaluaciones, acompañamiento de trayectorias escolares y talleres.",
     "presentacion": [
-      "¿Notás que a tu hijo o hija le cuesta aprender, sostener la atención en la escuela o se frustra con las tareas?",
+      "Tareas que terminan en llanto, una atención que se escapa en clase, la frustración frente al cuaderno. Cuando aprender cuesta, hay mucho que se puede hacer.",
       "Soy Ayelen, licenciada en Psicopedagogía. Concibo el aprendizaje como un proceso complejo que involucra dimensiones cognitivas, emocionales, sociales y vinculares. Trabajo desde un abordaje psicopedagógico integral, con una mirada contextual, singular y centrada en las potencialidades de cada persona, con aportes de la neuroeducación, la perspectiva de derechos y la diversidad en las formas de aprender.",
       "En cada proceso construimos un espacio de encuentro, escucha y acompañamiento, donde el juego, la exploración y las propuestas significativas se convierten en oportunidades para reconocer fortalezas, potenciar habilidades y desarrollar nuevas herramientas para aprender.",
       "Considero fundamental el trabajo conjunto con las familias y la articulación con las instituciones educativas, construyendo puentes y estrategias compartidas que respeten las singularidades y acompañen cada trayectoria de aprendizaje y desarrollo desde una perspectiva integral e inclusiva.",
@@ -1399,7 +1404,7 @@ RED.PROFESIONALES = [
     "accesibilidad": "Planta baja",
     "atencion": "Particular y obras sociales",
     "reintegro": true,
-    "honorarios": "",
+    "honorarios": "$30.000",
     "disponibilidad": "Lunes a viernes, turno mañana y tarde",
     "whatsapp": "5493735565814",
     "telefonos": "",
