@@ -1272,7 +1272,7 @@ RED.PROFESIONALES = [
     "direccion": "Instituto Eros, M. Jajan 1143 (calle 27 entre 24 y 26, Centro), Presidencia Roque Sáenz Peña",
     "resumen": "Psicóloga infantojuvenil y de adultos, con orientación psicoanalítica. Acompaño a niños, adolescentes y adultos, posibilitando un espacio para el juego, la palabra y la elaboración de las experiencias de vida.",
     "presentacion": [
-      "¿Alguna vez sentiste que “algo” te pasa, pero no encontrás las palabras para decirlo? ¿Sentís que hay situaciones que se repiten, emociones que desbordan o pensamientos que no dejan de insistir?",
+      "Hay malestares que todavía no tienen nombre. Algo pasa, se repite, desborda o insiste, y las palabras no alcanzan para decirlo.",
       "No necesitás saber exactamente qué te pasa para empezar. Hay malestares que no desaparecen simplemente porque nos propongamos “estar bien”.",
       "Quizás necesitás un lugar donde frenar el ruido, dejar de exigirte respuestas, donde empezar a escucharte y ser escuchado, para dar lugar a tu malestar.",
       "Trabajo desde una escucha que aloja singularidades, historias y preguntas, sin reducir el sufrimiento psíquico a un síntoma o diagnóstico, ni pensarlo por fuera de su contexto, sino como expresión de aquello que quizás aún no ha podido ser hablado ni elaborado.",
@@ -1344,9 +1344,10 @@ RED.PROFESIONALES = [
     "direccion": "Pte. Perón 755, Villa Ángela",
     "resumen": "Lic. en Psicopedagogía, especialista en neurodiversidad e inclusión escolar y social. Acompaña el aprendizaje, la autonomía y la participación de cada persona.",
     "presentacion": [
-      "Acompaño a familias, personas e instituciones educativas que buscan orientación ante desafíos en el aprendizaje, la comunicación, la conducta, la autonomía y la interacción social, y a quienes necesitan apoyos y estrategias para favorecer su desarrollo, independencia e inclusión en los diferentes ámbitos de la vida.",
-      "Entiendo que cada persona tiene una manera singular de aprender, comunicarse y relacionarse con el entorno. Las dificultades no definen a la persona: son parte de un proceso que necesita comprensión, apoyos y oportunidades. Ofrezco una mirada integral, respetuosa e inclusiva, centrada en las potencialidades, acompañando a cada persona, su familia y la escuela en la construcción de herramientas que favorezcan el aprendizaje, la autonomía y la participación social.",
-      "Abrimos un proceso de acompañamiento personalizado, orientado a reconocer fortalezas, desarrollar habilidades y construir herramientas que favorezcan el aprendizaje, la comunicación, la autonomía y la independencia. A través del trabajo conjunto con la persona, su familia y la escuela, buscamos generar oportunidades para una mayor participación e inclusión en los distintos ámbitos de la vida.",
+      "Ningún chico aprende igual que otro. Y ninguna dificultad alcanza para definir a una persona.",
+      "Desde esa certeza acompaño a familias, personas e instituciones educativas que buscan orientación ante desafíos en el aprendizaje, la comunicación, la conducta, la autonomía y la interacción social, y a quienes necesitan apoyos para favorecer su desarrollo, independencia e inclusión en los diferentes ámbitos de la vida.",
+      "Cada persona tiene una manera singular de aprender, comunicarse y relacionarse con el entorno. Las dificultades son parte de un proceso que necesita comprensión, apoyos y oportunidades. Por eso ofrezco una mirada integral, respetuosa e inclusiva, centrada en las potencialidades, y trabajo junto a la persona, su familia y la escuela en la construcción de herramientas para el aprendizaje, la autonomía y la participación social.",
+      "Abrimos un proceso de acompañamiento personalizado, orientado a reconocer fortalezas, desarrollar habilidades y construir herramientas que favorezcan el aprendizaje, la comunicación, la autonomía y la independencia, para generar más oportunidades de participación e inclusión.",
       "Si sentís que necesitás acompañamiento, podemos conversar. Estoy para escucharte, orientarte y construir juntos nuevas oportunidades de aprendizaje, autonomía e inclusión."
     ],
     "enfoque": "Neurodiversidad",
