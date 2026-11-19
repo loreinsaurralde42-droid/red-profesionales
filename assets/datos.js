@@ -1328,6 +1328,85 @@ RED.PROFESIONALES = [
     "email": "ornellaortigozapsi@gmail.com",
     "plan": "basico",
     "consentimiento": true
+  },
+  {
+    "id": "correa-pena",
+    "slug": "karen-correa-pena",
+    "nombre": "Karen Correa Peña",
+    "profesion": "Psicopedagogía",
+    "titulo": "Lic. en Psicopedagogía",
+    "matricula": "M.P. 230",
+    "verificado": false,
+    "rol": "",
+    "foto": "img/correa-pena.jpg",
+    "provincia": "Chaco",
+    "localidad": "Villa Ángela",
+    "direccion": "Pte. Perón 755, Villa Ángela",
+    "resumen": "Lic. en Psicopedagogía, especialista en neurodiversidad e inclusión escolar y social. Acompaña el aprendizaje, la autonomía y la participación de cada persona.",
+    "presentacion": [
+      "Acompaño a familias, personas e instituciones educativas que buscan orientación ante desafíos en el aprendizaje, la comunicación, la conducta, la autonomía y la interacción social, y a quienes necesitan apoyos y estrategias para favorecer su desarrollo, independencia e inclusión en los diferentes ámbitos de la vida.",
+      "Entiendo que cada persona tiene una manera singular de aprender, comunicarse y relacionarse con el entorno. Las dificultades no definen a la persona: son parte de un proceso que necesita comprensión, apoyos y oportunidades. Ofrezco una mirada integral, respetuosa e inclusiva, centrada en las potencialidades, acompañando a cada persona, su familia y la escuela en la construcción de herramientas que favorezcan el aprendizaje, la autonomía y la participación social.",
+      "Abrimos un proceso de acompañamiento personalizado, orientado a reconocer fortalezas, desarrollar habilidades y construir herramientas que favorezcan el aprendizaje, la comunicación, la autonomía y la independencia. A través del trabajo conjunto con la persona, su familia y la escuela, buscamos generar oportunidades para una mayor participación e inclusión en los distintos ámbitos de la vida.",
+      "Si sentís que necesitás acompañamiento, podemos conversar. Estoy para escucharte, orientarte y construir juntos nuevas oportunidades de aprendizaje, autonomía e inclusión."
+    ],
+    "enfoque": "Neurodiversidad",
+    "enfoqueDetalle": "Especialista en neurodiversidad",
+    "poblacion": [
+      "Niños",
+      "Adolescentes",
+      "Adultos",
+      "Adultos mayores",
+      "Grupos"
+    ],
+    "poblacionDetalle": "",
+    "areas": [
+      "Dificultades en el aprendizaje",
+      "Atención",
+      "Comunicación",
+      "Organización",
+      "Habilidades adaptativas",
+      "Interacción social",
+      "Acompañamiento de trayectorias escolares",
+      "Inclusión escolar y social",
+      "Autonomía en la vida cotidiana",
+      "Neurodiversidad",
+      "Orientación a familias"
+    ],
+    "categorias": [],
+    "servicios": [
+      "Evaluación y orientación psicopedagógica",
+      "Acompañamiento de los procesos de aprendizaje",
+      "Intervención psicopedagógica en neurodiversidad",
+      "Estimulación de habilidades cognitivas: atención, memoria, percepción, funciones ejecutivas y razonamiento",
+      "Desarrollo de habilidades para la autonomía y la independencia",
+      "Habilidades adaptativas para la vida cotidiana",
+      "Fortalecimiento de la comunicación y las habilidades sociales",
+      "Acompañamiento de trayectorias escolares e inclusión educativa",
+      "Orientación y asesoramiento a familias",
+      "Articulación con instituciones educativas y otros profesionales",
+      "Estrategias y apoyos individualizados"
+    ],
+    "formacion": [
+      "Lic. en Psicopedagogía",
+      "Especialista en neurodiversidad"
+    ],
+    "modalidad": [
+      "Presencial"
+    ],
+    "modalidadDetalle": "",
+    "idiomas": "Español",
+    "accesibilidad": "Planta baja",
+    "atencion": "Particular y obras sociales",
+    "reintegro": true,
+    "honorarios": "",
+    "disponibilidad": "Lunes a viernes, turno mañana y tarde",
+    "whatsapp": "5493735565814",
+    "telefonos": "",
+    "instagram": "",
+    "facebook": "",
+    "email": "karenmelinacorrea1902@gmail.com",
+    "plan": "basico",
+    "consentimiento": true
   }
 ];
 
