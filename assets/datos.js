@@ -956,7 +956,7 @@ RED.PROFESIONALES = [
     "matricula": "M.P. 5408",
     "verificado": false,
     "rol": "",
-    "foto": "img/fiorella-cinat.jpg",
+    "foto": "img/fiorella-cinat-2026.jpg",
     "provincia": "Chaco",
     "localidad": "Villa Ángela",
     "direccion": "Entre Terapias – Servicio de Fonoaudiología, Villa Ángela",
