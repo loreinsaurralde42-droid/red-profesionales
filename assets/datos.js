@@ -1324,7 +1324,7 @@ RED.PROFESIONALES = [
     "accesibilidad": "Consultorios en planta alta y planta baja",
     "atencion": "Particular",
     "reintegro": true,
-    "honorarios": "$40.000 por sesión",
+    "honorarios": "",
     "disponibilidad": "Lunes, martes y jueves de 8 a 11:30 y de 17:30 a 19:30 · Miércoles y viernes desde las 15:30",
     "whatsapp": "5493624757717",
     "telefonos": "",
