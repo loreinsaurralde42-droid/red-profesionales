@@ -48,6 +48,17 @@
   "framework": null,
   "redirects": [
     {
+      "source": "/:ruta*",
+      "has": [
+        {
+          "type": "host",
+          "value": "redprofesionales-chaco-vercel.vercel.app"
+        }
+      ],
+      "destination": "https://www.redarandu.com.ar/:ruta*",
+      "permanent": true
+    },
+    {
       "source": "/_fuente/:ruta*",
       "destination": "/404.html",
       "permanent": false
