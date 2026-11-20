@@ -507,7 +507,7 @@ cuerpo = f"""{nav}<main id="contenido" class="pagina"><div class="contenedor"><d
 <ul><li>Armar equipos interdisciplinarios con profesionales de distintas disciplinas.</li>
 <li>Derivar e interconsultar con confianza, pensando siempre en la persona.</li>
 <li>Recibir material para mejorar tus servicios y tu visibilidad con un marketing sostenible, consciente y transformador: comunicar quién sos con honestidad, estrategia y conocimiento, sin perder tu forma de trabajar.</li>
-<li>Publicar artículos en <a href="https://redprofesionales-chaco-vercel.vercel.app/bienestar/index.html">Bienestar y orientación</a>.</li>
+<li>Publicar artículos en <a href="https://www.redarandu.com.ar/bienestar/index.html">Bienestar y orientación</a>.</li>
 <li><span class="etq-prox">Próximamente</span> mentorías Profesiones con alma, para estructurar tu consultorio, tus servicios y tus productos. Integraciones de calendario, agenda, reservas, turnos y pagos.</li></ul>
 <p>Creemos que cada profesional tiene su propia verdad para compartir, y que ese saber se nutre todos los días de nuestros pacientes, que también nos enseñan.</p>
 
@@ -538,7 +538,7 @@ cuerpo = f"""{nav}<main id="contenido" class="pagina"><div class="contenedor"><d
 <ul><li>Completá todos los campos de tu ficha: áreas de trabajo, población, modalidad y disponibilidad.</li>
 <li>Escribí una presentación clara y cercana. Si querés, te ayudamos a redactarla.</li>
 <li>Compartí el enlace de tu perfil en tus redes y en tu estado de WhatsApp.</li>
-<li>Proponé un artículo para <a href="https://redprofesionales-chaco-vercel.vercel.app/bienestar/index.html">Bienestar y orientación</a>.</li></ul>
+<li>Proponé un artículo para <a href="https://www.redarandu.com.ar/bienestar/index.html">Bienestar y orientación</a>.</li></ul>
 
 <div class="cta-final cierre-arandu">
 <p class="destacado grande">Escuchar y sentir. Así se teje ARANDU.</p>

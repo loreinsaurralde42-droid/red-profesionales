@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /_fuente/
 
-Sitemap: https://redprofesionales-chaco-vercel.vercel.app/sitemap.xml
+Sitemap: https://www.redarandu.com.ar/sitemap.xml
